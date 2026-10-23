@@ -1,0 +1,22 @@
+{
+  "overall_bbox_mm": [
+    -1137.1,
+    -160.5,
+    -0.0,
+    1137.5,
+    335.2,
+    2108.3
+  ],
+  "body_height_mm": 1680.0,
+  "head_top_mm": 1680.0,
+  "head_bottom_mm": 1456.0,
+  "head_height_mm": 224.0,
+  "wing_span_mm": 2274.7,
+  "wing_top_mm": 2108.3,
+  "mesh_objects": 93,
+  "vertices": 21160,
+  "max_influences": 3,
+  "unweighted_vertices": 0,
+  "triangles_audit": 42036,
+  "wing_span_note": "measured tip-to-tip; design target 2400mm, actual 2274.7mm (-5.2%)"
+}

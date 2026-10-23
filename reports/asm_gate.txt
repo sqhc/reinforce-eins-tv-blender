@@ -1,0 +1,341 @@
+PLAN asm_gate ok · 7210 chars · verdict=pass · export_allowed 仅 verdict=pass 为 true；degraded=没查完/未确认，不是通过
+{
+ "ok": true,
+ "verdict": "pass",
+ "analyzed": true,
+ "export_allowed": true,
+ "strict": true,
+ "gates": [
+  {
+   "id": "mesh_health",
+   "state": "pass",
+   "reason": "",
+   "receipt": {
+    "mode": "audit_mesh",
+    "totals": {
+     "objects": 93,
+     "tris": 42036,
+     "boundary_edges": 0,
+     "nonmanifold_edges": 0,
+     "degenerate_faces": 0,
+     "loose_verts": 0,
+     "self_intersections": 0,
+     "normals_inverted": 0,
+     "out_of_bounds": 0,
+     "empty_objects": 0,
+     "loose_edges": 0,
+     "normals_unknown": 0,
+     "normals_checked": 93,
+     "normals_multi_shell": 0,
+     "analysis_incomplete": 0
+    },
+    "error": null
+   }
+  },
+  {
+   "id": "normals",
+   "state": "pass",
+   "inverted": [],
+   "unknown": [],
+   "checked": 93,
+   "reason": "闭合件法线全部朝外（93 个已判）"
+  },
+  {
+   "id": "clash_all",
+   "state": "pass",
+   "reason": "扫了 93 件 / 472 对候选：clash=0 contained=0 hidden_ok=196 contact=3 gap=273 float=0 unresolved=0 → pass",
+   "receipt": {
+    "ok": true,
+    "verdict": "pass",
+    "counts": {
+     "clash": 0,
+     "hidden_ok": 196,
+     "contact": 3,
+     "gap": 273,
+     "float": 0,
+     "contained": 0,
+     "unresolved": 0,
+     "gap_far": 3806,
+     "candidates": 432,
+     "near_pairs": 40,
+     "tested": 472,
+     "pairs_total": 4278
+    },
+    "coverage": {
+     "objects": 93,
+     "aabb_pairs": 432,
+     "near_pairs": 40,
+     "tested": 472,
+     "complete": true,
+     "truncated": false,
+     "budget_hit": false,
+     "unresolved_objects": [],
+     "md_errors": {}
+    },
+    "max_depth_mm": 64.5426,
+    "min_gap_mm": 0.1441,
+    "analyzed": true,
+    "offenders": [],
+    "offenders_total": 0,
+    "floaters": [],
+    "floaters_total": 0,
+    "pairs": [],
+    "pairs_total": 0,
+    "state": "pass",
+    "contract": {
+     "objects": 93,
+     "pairs_aabb": 432,
+     "pairs_tested": 432,
+     "pairs_checked": 432,
+     "pairs_overlapping": 196,
+     "exempted_count": 0,
+     "used": true
+    }
+   }
+  },
+  {
+   "id": "floaters",
+   "state": "pass",
+   "reason": "manifest 连接图：0 个浮空/接口未接触，0 个未判",
+   "floaters": [],
+   "unresolved": [],
+   "graph": {
+    "parts": 8,
+    "present_parts": 8,
+    "edges": 7,
+    "isolated": [],
+    "root_part": "P-Body",
+    "unreachable": []
+   }
+  },
+  {
+   "id": "interfaces",
+   "state": "pass",
+   "reason": "7 条接口：contact=7 float=0 unresolved=0",
+   "pairs": [
+    {
+     "id": "IF-01",
+     "a": "P-Body",
+     "b": "P-Head",
+     "state": "contact",
+     "gap_mm": 4.0001,
+     "limit_mm": 12
+    },
+    {
+     "id": "IF-02",
+     "a": "P-Head",
+     "b": "P-Hair",
+     "state": "contact",
+     "gap_mm": 0.0004,
+     "limit_mm": 12
+    },
+    {
+     "id": "IF-03",
+     "a": "P-Body",
+     "b": "P-Dress",
+     "state": "contact",
+     "gap_mm": 0.0009,
+     "limit_mm": 12
+    },
+    {
+     "id": "IF-04",
+     "a": "P-Body",
+     "b": "P-Arms",
+     "state": "contact",
+     "gap_mm": 6.7744,
+     "limit_mm": 12
+    },
+    {
+     "id": "IF-05",
+     "a": "P-Body",
+     "b": "P-Legs",
+     "state": "contact",
+     "gap_mm": 3.3845,
+     "limit_mm": 12
+    },
+    {
+     "id": "IF-06",
+     "a": "P-Dress",
+     "b": "P-Coat",
+     "state": "contact",
+     "gap_mm": 0.0144,
+     "limit_mm": 12
+    },
+    {
+     "id": "IF-07",
+     "a": "P-Body",
+     "b": "P-Wings",
+     "state": "contact",
+     "gap_mm": 0.0175,
+     "limit_mm": 40
+    }
+   ]
+  },
+  {
+   "id": "measure",
+   "state": "pass",
+   "reason": "7 个期望全部在公差内",
+   "deviations": [
+    {
+     "kind": "interface",
+     "id": "IF-01",
+     "a": "P-Body",
+     "b": "P-Head",
+     "measured_gap_mm": 4.0001,
+     "bbox_gap_mm": 4.0001,
+     "expected_mm": 0,
+     "tol_mm": 12,
+     "deviation_mm": 4.0001,
+     "state": "pass",
+     "why": "接口 IF-01 实测单边间隙 4.000 mm，期望 0.000 ± 12.000 mm"
+    },
+    {
+     "kind": "interface",
+     "id": "IF-02",
+     "a": "P-Head",
+     "b": "P-Hair",
+     "measured_gap_mm": 0.0004,
+     "bbox_gap_mm": 0,
+     "expected_mm": 0,
+     "tol_mm": 12,
+     "deviation_mm": 0.0004,
+     "state": "pass",
+     "why": "接口 IF-02 实测单边间隙 0.000 mm，期望 0.000 ± 12.000 mm"
+    },
+    {
+     "kind": "interface",
+     "id": "IF-03",
+     "a": "P-Body",
+     "b": "P-Dress",
+     "measured_gap_mm": 0.0009,
+     "bbox_gap_mm": 0,
+     "expected_mm": 0,
+     "tol_mm": 12,
+     "deviation_mm": 0.0009,
+     "state": "pass",
+     "why": "接口 IF-03 实测单边间隙 0.001 mm，期望 0.000 ± 12.000 mm"
+    },
+    {
+     "kind": "interface",
+     "id": "IF-04",
+     "a": "P-Body",
+     "b": "P-Arms",
+     "measured_gap_mm": 6.7744,
+     "bbox_gap_mm": 217.1813,
+     "expected_mm": 0,
+     "tol_mm": 12,
+     "deviation_mm": 6.7744,
+     "state": "pass",
+     "why": "接口 IF-04 实测单边间隙 6.774 mm，期望 0.000 ± 12.000 mm"
+    },
+    {
+     "kind": "interface",
+     "id": "IF-05",
+     "a": "P-Body",
+     "b": "P-Legs",
+     "measured_gap_mm": 3.3845,
+     "bbox_gap_mm": 138.7978,
+     "expected_mm": 0,
+     "tol_mm": 12,
+     "deviation_mm": 3.3845,
+     "state": "pass",
+     "why": "接口 IF-05 实测单边间隙 3.385 mm，期望 0.000 ± 12.000 mm"
+    },
+    {
+     "kind": "interface",
+     "id": "IF-06",
+     "a": "P-Dress",
+     "b": "P-Coat",
+     "measured_gap_mm": 0.0144,
+     "bbox_gap_mm": null,
+     "expected_mm": 0,
+     "tol_mm": 12,
+     "deviation_mm": 0.0144,
+     "state": "pass",
+     "why": "接口 IF-06 实测单边间隙 0.014 mm，期望 0.000 ± 12.000 mm"
+    },
+    {
+     "kind": "interface",
+     "id": "IF-07",
+     "a": "P-Body",
+     "b": "P-Wings",
+     "measured_gap_mm": 0.0175,
+     "bbox_gap_mm": 0,
+     "expected_mm": 0,
+     "tol_mm": 40,
+     "deviation_mm": 0.0175,
+     "state": "pass",
+     "why": "接口 IF-07 实测单边间隙 0.018 mm，期望 0.000 ± 40.000 mm"
+    }
+   ],
+   "receipt": {
+    "audit_measure": {
+     "used": true,
+     "error": null,
+     "pairs_bbox": 2000
+    }
+   }
+  }
+ ],
+ "trend": {
+  "clash": 0,
+  "contained": 0,
+  "hidden_ok": 196,
+  "contact": 3,
+  "gap": 273,
+  "unresolved": 0,
+  "float": 0,
+  "max_depth_mm": 64.5426
+ },
+ "offenders": [],
+ "repairs": [],
+ "coverage": {
+  "gates": 6,
+  "enabled": 6,
+  "ran": 6,
+  "disabled": 0,
+  "skipped": 0,
+  "complete": true
+ },
+ "require": {
+  "mesh_health": true,
+  "normals": true,
+  "clash": true,
+  "floaters": true,
+  "interfaces": true,
+  "measure": true
+ },
+ "manifest": {
+  "assembly": "Reinforce_Eins_TV",
+  "sealed": false,
+  "manifest_md5": "730573bb041d0b90e7813f036ccfc06ef8e3510dce3fb87a84d1d5088eed6ce8",
+  "counts": {
+   "parts": 8,
+   "interfaces": 7,
+   "allow_pairs": 36
+  }
+ },
+ "shots": {
+  "state": "skipped",
+  "shots": [],
+  "note": "v1 不出图（shots 先 false）；数字结论以 audit_clash_all/measure 为准"
+ },
+ "verdict_line": "装配门 pass（export_allowed=True）：mesh_health=pass · normals=pass · clash_all=pass · floaters=pass · interfaces=pass · measure=pass",
+ "note": "export_allowed 仅 verdict=pass 为 true；degraded=没查完/未确认，不是通过",
+ "honest_limits": [
+  "mesh 门用 audit_mesh 求值网格；scan 用同一套求值网格，但两者对多壳法线口径不同",
+  "没有 manifest 时浮空退 audit_connectivity（单件 1% 可见 + micro_gap 口径），装配件可能误判/漏判",
+  "measure 用表面采样最近距离（不是接触面积），bbox 值只作旁证",
+  "本版不出穿透特写图（shots 恒 skipped），图只作证据、结论仍以数字为准"
+ ],
+ "trace": {
+  "objects": 93,
+  "md_errors": {},
+  "hidden_skipped": 0
+ },
+ "receipt_md5": "79f2e391764dd35f29796def4f0ce8923d9cf068a1c64bf9a9e2814fe8a536be",
+ "units": {
+  "mm_per_unit": 1000
+ },
+ "ms": 27880
+}

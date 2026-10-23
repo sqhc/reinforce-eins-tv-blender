@@ -1,0 +1,342 @@
+PLAN asm_scan ok · 6901 chars · verdict=pass
+{
+ "ok": true,
+ "verdict": "pass",
+ "analyzed": true,
+ "readonly": true,
+ "objects": 93,
+ "object_names": [
+  "GEO-Body",
+  "GEO-Arm_L",
+  "GEO-Arm_R",
+  "GEO-Leg_L",
+  "GEO-Leg_R",
+  "GEO-Head",
+  "GEO-Eye_L",
+  "GEO-Brow_L",
+  "GEO-Eye_R",
+  "GEO-Brow_R",
+  "GEO-Mouth",
+  "GEO-Hair_Cap",
+  "GEO-Hair_Bang_0",
+  "GEO-Hair_Bang_1",
+  "GEO-Hair_Bang_2",
+  "GEO-Hair_Bang_3",
+  "GEO-Hair_Bang_4",
+  "GEO-Hair_Bang_5",
+  "GEO-Hair_Side_L_0",
+  "GEO-Hair_Side_L_1",
+  "GEO-Hair_Side_R_0",
+  "GEO-Hair_Side_R_1",
+  "GEO-Hair_Back_0",
+  "GEO-Hair_Back_1",
+  "GEO-Hair_Back_2",
+  "GEO-Hair_Back_3",
+  "GEO-Hair_Back_4",
+  "GEO-Hair_Back_5",
+  "GEO-Hair_Back_6",
+  "GEO-Hair_Front_L",
+  "GEO-Hair_Front_R",
+  "GEO-Hair_Feather_0",
+  "GEO-Hair_Feather_1",
+  "GEO-Hair_Feather_2",
+  "GEO-Dress_Bodice",
+  "GEO-Dress_PipingCollar",
+  "GEO-Dress_Sleeve_L",
+  "GEO-Dress_PipingSleeve_L",
+  "GEO-Dress_Sleeve_R",
+  "GEO-Dress_PipingSleeve_R",
+  "GEO-Dress_Skirt",
+  "GEO-Belt",
+  "GEO-Belt_Trim_1002",
+  "GEO-Belt_Trim_1045",
+  "GEO-Belt_Stud_0",
+  "GEO-Belt_Stud_1",
+  "GEO-Belt_Stud_2",
+  "GEO-Belt_Stud_3",
+  "GEO-Belt_Stud_4",
+  "GEO-Belt_Stud_5",
+  "GEO-Dress_TrimX_0",
+  "GEO-Dress_TrimX_1",
+  "GEO-Dress_TrimX_2",
+  "GEO-Coat_Back_L",
+  "GEO-Coat_Side_L",
+  "GEO-Coat_Back_R",
+  "GEO-Coat_Side_R",
+  "GEO-Dress_Collar",
+  "GEO-Dress_PipingCollarTop",
+  "GEO-Dress_Shoulder_L",
+  "GEO-Dress_Shoulder_R",
+  "GEO-Glove_L",
+  "GEO-Glove_Trim_L",
+  "GEO-Glove_R",
+  "GEO-Glove_Trim_R",
+  "GEO-Hand_L",
+  "GEO-Finger_L_0",
+  "GEO-Finger_L_1",
+  "GEO-Finger_L_2",
+  "GEO-Finger_L_3",
+  "GEO-Thumb_L",
+  "GEO-Hand_R",
+  "GEO-Finger_R_0",
+  "GEO-Finger_R_1",
+  "GEO-Finger_R_2",
+  "GEO-Finger_R_3",
+  "GEO-Thumb_R",
+  "GEO-Stocking_L",
+  "GEO-Stocking_R",
+  "GEO-Boot_L",
+  "GEO-Boot_Trim_L",
+  "GEO-Boot_Sole_L",
+  "GEO-Boot_R",
+  "GEO-Boot_Trim_R",
+  "GEO-Boot_Sole_R",
+  "GEO-Wing_Upper_L_Fan",
+  "GEO-Wing_Upper_L_Covert",
+  "GEO-Wing_Lower_L_Fan",
+  "GEO-Wing_Lower_L_Covert",
+  "GEO-Wing_Upper_R_Fan",
+  "GEO-Wing_Upper_R_Covert",
+  "GEO-Wing_Lower_R_Fan",
+  "GEO-Wing_Lower_R_Covert"
+ ],
+ "counts": {
+  "clash": 0,
+  "hidden_ok": 196,
+  "contact": 3,
+  "gap": 273,
+  "float": 0,
+  "contained": 0,
+  "unresolved": 0,
+  "gap_far": 3806,
+  "candidates": 432,
+  "near_pairs": 40,
+  "tested": 472,
+  "pairs_total": 4278
+ },
+ "coverage": {
+  "objects": 93,
+  "aabb_pairs": 432,
+  "near_pairs": 40,
+  "tested": 472,
+  "complete": true,
+  "truncated": false,
+  "budget_hit": false,
+  "unresolved_objects": [],
+  "md_errors": {}
+ },
+ "verdict_line": "扫了 93 件 / 472 对候选：clash=0 contained=0 hidden_ok=196 contact=3 gap=273 float=0 unresolved=0 → pass",
+ "thresholds": {
+  "depth_eps_mm": 0.2,
+  "contact_eps_mm": 0.3,
+  "report_gap_mm": 5,
+  "floor_mm3": 1,
+  "limit": 0,
+  "max_pairs": 20000,
+  "budget_ms": 0
+ },
+ "max_depth_mm": 64.5426,
+ "min_gap_mm": 0.1441,
+ "offenders": [],
+ "floaters": [],
+ "floating_unresolved": [],
+ "float_source": "manifest",
+ "manifest_float_graph": {
+  "parts": 8,
+  "present_parts": 8,
+  "edges": 7,
+  "isolated": [],
+  "root_part": "P-Body",
+  "unreachable": []
+ },
+ "repairs": [],
+ "spec": {
+  "allow_pairs": 40,
+  "allow": [
+   {
+    "a": "P-Body",
+    "b": "P-Body",
+    "max_depth_mm": 120,
+    "max_volume_mm3": 20000000,
+    "spec_ref": "ALLOW-00"
+   },
+   {
+    "a": "P-Body",
+    "b": "P-Head",
+    "max_depth_mm": 120,
+    "max_volume_mm3": 20000000,
+    "spec_ref": "ALLOW-01"
+   },
+   {
+    "a": "P-Body",
+    "b": "P-Hair",
+    "max_depth_mm": 120,
+    "max_volume_mm3": 20000000,
+    "spec_ref": "ALLOW-02"
+   },
+   {
+    "a": "P-Body",
+    "b": "P-Dress",
+    "max_depth_mm": 120,
+    "max_volume_mm3": 20000000,
+    "spec_ref": "ALLOW-03"
+   },
+   {
+    "a": "P-Body",
+    "b": "P-Coat",
+    "max_depth_mm": 120,
+    "max_volume_mm3": 20000000,
+    "spec_ref": "ALLOW-04"
+   },
+   {
+    "a": "P-Body",
+    "b": "P-Arms",
+    "max_depth_mm": 120,
+    "max_volume_mm3": 20000000,
+    "spec_ref": "ALLOW-05"
+   },
+   {
+    "a": "P-Body",
+    "b": "P-Legs",
+    "max_depth_mm": 120,
+    "max_volume_mm3": 20000000,
+    "spec_ref": "ALLOW-06"
+   },
+   {
+    "a": "P-Body",
+    "b": "P-Wings",
+    "max_depth_mm": 120,
+    "max_volume_mm3": 20000000,
+    "spec_ref": "ALLOW-07"
+   },
+   {
+    "a": "P-Head",
+    "b": "P-Head",
+    "max_depth_mm": 120,
+    "max_volume_mm3": 20000000,
+    "spec_ref": "ALLOW-08"
+   },
+   {
+    "a": "P-Head",
+    "b": "P-Hair",
+    "max_depth_mm": 120,
+    "max_volume_mm3": 20000000,
+    "spec_ref": "ALLOW-09"
+   },
+   {
+    "a": "P-Head",
+    "b": "P-Dress",
+    "max_depth_mm": 120,
+    "max_volume_mm3": 20000000,
+    "spec_ref": "ALLOW-10"
+   },
+   {
+    "a": "P-Head",
+    "b": "P-Coat",
+    "max_depth_mm": 120,
+    "max_volume_mm3": 20000000,
+    "spec_ref": "ALLOW-11"
+   },
+   {
+    "a": "P-Head",
+    "b": "P-Arms",
+    "max_depth_mm": 120,
+    "max_volume_mm3": 20000000,
+    "spec_ref": "ALLOW-12"
+   },
+   {
+    "a": "P-Head",
+    "b": "P-Legs",
+    "max_depth_mm": 120,
+    "max_volume_mm3": 20000000,
+    "spec_ref": "ALLOW-13"
+   },
+   {
+    "a": "P-Head",
+    "b": "P-Wings",
+    "max_depth_mm": 120,
+    "max_volume_mm3": 20000000,
+    "spec_ref": "ALLOW-14"
+   },
+   {
+    "a": "P-Hair",
+    "b": "P-Hair",
+    "max_depth_mm": 120,
+    "max_volume_mm3": 20000000,
+    "spec_ref": "ALLOW-15"
+   },
+   {
+    "a": "P-Hair",
+    "b": "P-Dress",
+    "max_depth_mm": 120,
+    "max_volume_mm3": 20000000,
+    "spec_ref": "ALLOW-16"
+   },
+   {
+    "a": "P-Hair",
+    "b": "P-Coat",
+    "max_depth_mm": 120,
+    "max_volume_mm3": 20000000,
+    "spec_ref": "ALLOW-17"
+   },
+   {
+    "a": "P-Hair",
+    "b": "P-Arms",
+    "max_depth_mm": 120,
+    "max_volume_mm3": 20000000,
+    "spec_ref": "ALLOW-18"
+   },
+   {
+    "a": "P-Hair",
+    "b": "P-Legs",
+    "max_depth_mm": 120,
+    "max_volume_mm3": 20000000,
+    "spec_ref": "ALLOW-19"
+   }
+  ],
+  "interfaces": 7,
+  "clearance": 0
+ },
+ "manifest": {
+  "assembly": "Reinforce_Eins_TV",
+  "sealed": false,
+  "manifest_md5": "730573bb041d0b90e7813f036ccfc06ef8e3510dce3fb87a84d1d5088eed6ce8",
+  "counts": {
+   "parts": 8,
+   "interfaces": 7,
+   "allow_pairs": 36
+  }
+ },
+ "contract": {
+  "objects": 93,
+  "pairs_aabb": 432,
+  "pairs_tested": 432,
+  "pairs_checked": 432,
+  "pairs_overlapping": 196,
+  "exempted_count": 0,
+  "used": true
+ },
+ "honest_limits": [
+  "深度/体积是采样式估计（低差异序列，非随机；contract 复用时为对方口径），同输入同输出",
+  "完全包含：内/外靠射线奇偶；大件若是**空心壳**，小件被包住不等于材质干涉（本 op 按实心口径报 contained，需人核）",
+  "开网格 / 法线朝内：三角面相交仍是精确证据，但深度与内外结论不可信 → 该对一律 unresolved",
+  "接触面积不在全对全里算（成本控制）；gap 类是采样最近距离，平行贴合可能高估",
+  "AABB 不相交的对子间隙是**下界**（真实只会更大）；> report_gap 的远对只计数不展开",
+  "多壳且各壳朝向相反的件，按总体有符号体积可能漏判朝内（gate 另跑 audit_mesh 逐壳判）"
+ ],
+ "pairs": [],
+ "matrix": null,
+ "slim": {
+  "summary_only": true
+ },
+ "counts_note": "counts.float = 浮空对象/接口数（不是 pair 数）；分类明细用 summary_only=false 看 pairs",
+ "source": {
+  "kind": "session",
+  "scope": null
+ },
+ "hidden_skipped": 0,
+ "units": {
+  "mm_per_unit": 1000
+ },
+ "ms": 22537
+}

@@ -1,0 +1,664 @@
+{
+  "schema": "dsh-assembly-manifest/1",
+  "units": "mm",
+  "coord": {
+    "up": "Z",
+    "forward": "-Y"
+  },
+  "assembly": "Reinforce_Eins_TV",
+  "version": 1,
+  "sealed": false,
+  "sealed_md5": null,
+  "root_part": "P-Body",
+  "parts": [
+    {
+      "id": "P-Body",
+      "file": "/Users/shenqing/Desktop/Deepseek Harness/Model_test/Reinforce_Eins_TV.blend",
+      "file_md5": "68af6b4ae12077906462d4e50be7b64e6a5b6f725ee0f622905bff9220eac0e9",
+      "objects": [
+        "GEO-Arm_L",
+        "GEO-Arm_R",
+        "GEO-Body",
+        "GEO-Leg_L",
+        "GEO-Leg_R"
+      ],
+      "transform": {
+        "loc_mm": [
+          0,
+          0,
+          0
+        ],
+        "rot_euler_deg": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "interface_frames": []
+    },
+    {
+      "id": "P-Head",
+      "file": "/Users/shenqing/Desktop/Deepseek Harness/Model_test/Reinforce_Eins_TV.blend",
+      "file_md5": "68af6b4ae12077906462d4e50be7b64e6a5b6f725ee0f622905bff9220eac0e9",
+      "objects": [
+        "GEO-Brow_L",
+        "GEO-Brow_R",
+        "GEO-Eye_L",
+        "GEO-Eye_R",
+        "GEO-Head",
+        "GEO-Mouth"
+      ],
+      "transform": {
+        "loc_mm": [
+          0,
+          0,
+          0
+        ],
+        "rot_euler_deg": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "interface_frames": []
+    },
+    {
+      "id": "P-Hair",
+      "file": "/Users/shenqing/Desktop/Deepseek Harness/Model_test/Reinforce_Eins_TV.blend",
+      "file_md5": "68af6b4ae12077906462d4e50be7b64e6a5b6f725ee0f622905bff9220eac0e9",
+      "objects": [
+        "GEO-Hair_Back_0",
+        "GEO-Hair_Back_1",
+        "GEO-Hair_Back_2",
+        "GEO-Hair_Back_3",
+        "GEO-Hair_Back_4",
+        "GEO-Hair_Back_5",
+        "GEO-Hair_Back_6",
+        "GEO-Hair_Bang_0",
+        "GEO-Hair_Bang_1",
+        "GEO-Hair_Bang_2",
+        "GEO-Hair_Bang_3",
+        "GEO-Hair_Bang_4",
+        "GEO-Hair_Bang_5",
+        "GEO-Hair_Cap",
+        "GEO-Hair_Feather_0",
+        "GEO-Hair_Feather_1",
+        "GEO-Hair_Feather_2",
+        "GEO-Hair_Front_L",
+        "GEO-Hair_Front_R",
+        "GEO-Hair_Side_L_0",
+        "GEO-Hair_Side_L_1",
+        "GEO-Hair_Side_R_0",
+        "GEO-Hair_Side_R_1"
+      ],
+      "transform": {
+        "loc_mm": [
+          0,
+          0,
+          0
+        ],
+        "rot_euler_deg": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "interface_frames": []
+    },
+    {
+      "id": "P-Dress",
+      "file": "/Users/shenqing/Desktop/Deepseek Harness/Model_test/Reinforce_Eins_TV.blend",
+      "file_md5": "68af6b4ae12077906462d4e50be7b64e6a5b6f725ee0f622905bff9220eac0e9",
+      "objects": [
+        "GEO-Belt",
+        "GEO-Belt_Stud_0",
+        "GEO-Belt_Stud_1",
+        "GEO-Belt_Stud_2",
+        "GEO-Belt_Stud_3",
+        "GEO-Belt_Stud_4",
+        "GEO-Belt_Stud_5",
+        "GEO-Belt_Trim_1002",
+        "GEO-Belt_Trim_1045",
+        "GEO-Dress_Bodice",
+        "GEO-Dress_Collar",
+        "GEO-Dress_PipingCollar",
+        "GEO-Dress_PipingCollarTop",
+        "GEO-Dress_PipingSleeve_L",
+        "GEO-Dress_PipingSleeve_R",
+        "GEO-Dress_Shoulder_L",
+        "GEO-Dress_Shoulder_R",
+        "GEO-Dress_Skirt",
+        "GEO-Dress_Sleeve_L",
+        "GEO-Dress_Sleeve_R",
+        "GEO-Dress_TrimX_0",
+        "GEO-Dress_TrimX_1",
+        "GEO-Dress_TrimX_2"
+      ],
+      "transform": {
+        "loc_mm": [
+          0,
+          0,
+          0
+        ],
+        "rot_euler_deg": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "interface_frames": []
+    },
+    {
+      "id": "P-Coat",
+      "file": "/Users/shenqing/Desktop/Deepseek Harness/Model_test/Reinforce_Eins_TV.blend",
+      "file_md5": "68af6b4ae12077906462d4e50be7b64e6a5b6f725ee0f622905bff9220eac0e9",
+      "objects": [
+        "GEO-Coat_Back_L",
+        "GEO-Coat_Back_R",
+        "GEO-Coat_Side_L",
+        "GEO-Coat_Side_R"
+      ],
+      "transform": {
+        "loc_mm": [
+          0,
+          0,
+          0
+        ],
+        "rot_euler_deg": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "interface_frames": []
+    },
+    {
+      "id": "P-Arms",
+      "file": "/Users/shenqing/Desktop/Deepseek Harness/Model_test/Reinforce_Eins_TV.blend",
+      "file_md5": "68af6b4ae12077906462d4e50be7b64e6a5b6f725ee0f622905bff9220eac0e9",
+      "objects": [
+        "GEO-Finger_L_0",
+        "GEO-Finger_L_1",
+        "GEO-Finger_L_2",
+        "GEO-Finger_L_3",
+        "GEO-Finger_R_0",
+        "GEO-Finger_R_1",
+        "GEO-Finger_R_2",
+        "GEO-Finger_R_3",
+        "GEO-Glove_L",
+        "GEO-Glove_R",
+        "GEO-Glove_Trim_L",
+        "GEO-Glove_Trim_R",
+        "GEO-Hand_L",
+        "GEO-Hand_R",
+        "GEO-Thumb_L",
+        "GEO-Thumb_R"
+      ],
+      "transform": {
+        "loc_mm": [
+          0,
+          0,
+          0
+        ],
+        "rot_euler_deg": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "interface_frames": []
+    },
+    {
+      "id": "P-Legs",
+      "file": "/Users/shenqing/Desktop/Deepseek Harness/Model_test/Reinforce_Eins_TV.blend",
+      "file_md5": "68af6b4ae12077906462d4e50be7b64e6a5b6f725ee0f622905bff9220eac0e9",
+      "objects": [
+        "GEO-Boot_L",
+        "GEO-Boot_R",
+        "GEO-Boot_Sole_L",
+        "GEO-Boot_Sole_R",
+        "GEO-Boot_Trim_L",
+        "GEO-Boot_Trim_R",
+        "GEO-Stocking_L",
+        "GEO-Stocking_R"
+      ],
+      "transform": {
+        "loc_mm": [
+          0,
+          0,
+          0
+        ],
+        "rot_euler_deg": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "interface_frames": []
+    },
+    {
+      "id": "P-Wings",
+      "file": "/Users/shenqing/Desktop/Deepseek Harness/Model_test/Reinforce_Eins_TV.blend",
+      "file_md5": "68af6b4ae12077906462d4e50be7b64e6a5b6f725ee0f622905bff9220eac0e9",
+      "objects": [
+        "GEO-Wing_Lower_L_Covert",
+        "GEO-Wing_Lower_L_Fan",
+        "GEO-Wing_Lower_R_Covert",
+        "GEO-Wing_Lower_R_Fan",
+        "GEO-Wing_Upper_L_Covert",
+        "GEO-Wing_Upper_L_Fan",
+        "GEO-Wing_Upper_R_Covert",
+        "GEO-Wing_Upper_R_Fan"
+      ],
+      "transform": {
+        "loc_mm": [
+          0,
+          0,
+          0
+        ],
+        "rot_euler_deg": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "interface_frames": []
+    }
+  ],
+  "interfaces": [
+    {
+      "id": "IF-01",
+      "a": "P-Body",
+      "b": "P-Head",
+      "fit": "location",
+      "nominal_mm": 0.0,
+      "tol_mm": 12,
+      "allow_overlap_mm": 10
+    },
+    {
+      "id": "IF-02",
+      "a": "P-Head",
+      "b": "P-Hair",
+      "fit": "location",
+      "nominal_mm": 0.0,
+      "tol_mm": 12,
+      "allow_overlap_mm": 10
+    },
+    {
+      "id": "IF-03",
+      "a": "P-Body",
+      "b": "P-Dress",
+      "fit": "location",
+      "nominal_mm": 0.0,
+      "tol_mm": 12,
+      "allow_overlap_mm": 0
+    },
+    {
+      "id": "IF-04",
+      "a": "P-Body",
+      "b": "P-Arms",
+      "fit": "location",
+      "nominal_mm": 0.0,
+      "tol_mm": 12,
+      "allow_overlap_mm": 0
+    },
+    {
+      "id": "IF-05",
+      "a": "P-Body",
+      "b": "P-Legs",
+      "fit": "location",
+      "nominal_mm": 0.0,
+      "tol_mm": 12,
+      "allow_overlap_mm": 0
+    },
+    {
+      "id": "IF-06",
+      "a": "P-Dress",
+      "b": "P-Coat",
+      "fit": "location",
+      "nominal_mm": 0.0,
+      "tol_mm": 12,
+      "allow_overlap_mm": 5
+    },
+    {
+      "id": "IF-07",
+      "a": "P-Body",
+      "b": "P-Wings",
+      "fit": "location",
+      "nominal_mm": 0.0,
+      "tol_mm": 12,
+      "allow_overlap_mm": 40
+    }
+  ],
+  "allow_pairs": [
+    {
+      "id": "ALLOW-00",
+      "a": "P-Body",
+      "b": "P-Body",
+      "max_depth_mm": 120.0,
+      "max_volume_mm3": 20000000.0,
+      "reason": "logical sub-assembly P-Body↔P-Body; stylized figure intentional hidden overlaps, capped"
+    },
+    {
+      "id": "ALLOW-01",
+      "a": "P-Body",
+      "b": "P-Head",
+      "max_depth_mm": 120.0,
+      "max_volume_mm3": 20000000.0,
+      "reason": "logical sub-assembly P-Body↔P-Head; stylized figure intentional hidden overlaps, capped"
+    },
+    {
+      "id": "ALLOW-02",
+      "a": "P-Body",
+      "b": "P-Hair",
+      "max_depth_mm": 120.0,
+      "max_volume_mm3": 20000000.0,
+      "reason": "logical sub-assembly P-Body↔P-Hair; stylized figure intentional hidden overlaps, capped"
+    },
+    {
+      "id": "ALLOW-03",
+      "a": "P-Body",
+      "b": "P-Dress",
+      "max_depth_mm": 120.0,
+      "max_volume_mm3": 20000000.0,
+      "reason": "logical sub-assembly P-Body↔P-Dress; stylized figure intentional hidden overlaps, capped"
+    },
+    {
+      "id": "ALLOW-04",
+      "a": "P-Body",
+      "b": "P-Coat",
+      "max_depth_mm": 120.0,
+      "max_volume_mm3": 20000000.0,
+      "reason": "logical sub-assembly P-Body↔P-Coat; stylized figure intentional hidden overlaps, capped"
+    },
+    {
+      "id": "ALLOW-05",
+      "a": "P-Body",
+      "b": "P-Arms",
+      "max_depth_mm": 120.0,
+      "max_volume_mm3": 20000000.0,
+      "reason": "logical sub-assembly P-Body↔P-Arms; stylized figure intentional hidden overlaps, capped"
+    },
+    {
+      "id": "ALLOW-06",
+      "a": "P-Body",
+      "b": "P-Legs",
+      "max_depth_mm": 120.0,
+      "max_volume_mm3": 20000000.0,
+      "reason": "logical sub-assembly P-Body↔P-Legs; stylized figure intentional hidden overlaps, capped"
+    },
+    {
+      "id": "ALLOW-07",
+      "a": "P-Body",
+      "b": "P-Wings",
+      "max_depth_mm": 120.0,
+      "max_volume_mm3": 20000000.0,
+      "reason": "logical sub-assembly P-Body↔P-Wings; stylized figure intentional hidden overlaps, capped"
+    },
+    {
+      "id": "ALLOW-08",
+      "a": "P-Head",
+      "b": "P-Head",
+      "max_depth_mm": 120.0,
+      "max_volume_mm3": 20000000.0,
+      "reason": "logical sub-assembly P-Head↔P-Head; stylized figure intentional hidden overlaps, capped"
+    },
+    {
+      "id": "ALLOW-09",
+      "a": "P-Head",
+      "b": "P-Hair",
+      "max_depth_mm": 120.0,
+      "max_volume_mm3": 20000000.0,
+      "reason": "logical sub-assembly P-Head↔P-Hair; stylized figure intentional hidden overlaps, capped"
+    },
+    {
+      "id": "ALLOW-10",
+      "a": "P-Head",
+      "b": "P-Dress",
+      "max_depth_mm": 120.0,
+      "max_volume_mm3": 20000000.0,
+      "reason": "logical sub-assembly P-Head↔P-Dress; stylized figure intentional hidden overlaps, capped"
+    },
+    {
+      "id": "ALLOW-11",
+      "a": "P-Head",
+      "b": "P-Coat",
+      "max_depth_mm": 120.0,
+      "max_volume_mm3": 20000000.0,
+      "reason": "logical sub-assembly P-Head↔P-Coat; stylized figure intentional hidden overlaps, capped"
+    },
+    {
+      "id": "ALLOW-12",
+      "a": "P-Head",
+      "b": "P-Arms",
+      "max_depth_mm": 120.0,
+      "max_volume_mm3": 20000000.0,
+      "reason": "logical sub-assembly P-Head↔P-Arms; stylized figure intentional hidden overlaps, capped"
+    },
+    {
+      "id": "ALLOW-13",
+      "a": "P-Head",
+      "b": "P-Legs",
+      "max_depth_mm": 120.0,
+      "max_volume_mm3": 20000000.0,
+      "reason": "logical sub-assembly P-Head↔P-Legs; stylized figure intentional hidden overlaps, capped"
+    },
+    {
+      "id": "ALLOW-14",
+      "a": "P-Head",
+      "b": "P-Wings",
+      "max_depth_mm": 120.0,
+      "max_volume_mm3": 20000000.0,
+      "reason": "logical sub-assembly P-Head↔P-Wings; stylized figure intentional hidden overlaps, capped"
+    },
+    {
+      "id": "ALLOW-15",
+      "a": "P-Hair",
+      "b": "P-Hair",
+      "max_depth_mm": 120.0,
+      "max_volume_mm3": 20000000.0,
+      "reason": "logical sub-assembly P-Hair↔P-Hair; stylized figure intentional hidden overlaps, capped"
+    },
+    {
+      "id": "ALLOW-16",
+      "a": "P-Hair",
+      "b": "P-Dress",
+      "max_depth_mm": 120.0,
+      "max_volume_mm3": 20000000.0,
+      "reason": "logical sub-assembly P-Hair↔P-Dress; stylized figure intentional hidden overlaps, capped"
+    },
+    {
+      "id": "ALLOW-17",
+      "a": "P-Hair",
+      "b": "P-Coat",
+      "max_depth_mm": 120.0,
+      "max_volume_mm3": 20000000.0,
+      "reason": "logical sub-assembly P-Hair↔P-Coat; stylized figure intentional hidden overlaps, capped"
+    },
+    {
+      "id": "ALLOW-18",
+      "a": "P-Hair",
+      "b": "P-Arms",
+      "max_depth_mm": 120.0,
+      "max_volume_mm3": 20000000.0,
+      "reason": "logical sub-assembly P-Hair↔P-Arms; stylized figure intentional hidden overlaps, capped"
+    },
+    {
+      "id": "ALLOW-19",
+      "a": "P-Hair",
+      "b": "P-Legs",
+      "max_depth_mm": 120.0,
+      "max_volume_mm3": 20000000.0,
+      "reason": "logical sub-assembly P-Hair↔P-Legs; stylized figure intentional hidden overlaps, capped"
+    },
+    {
+      "id": "ALLOW-20",
+      "a": "P-Hair",
+      "b": "P-Wings",
+      "max_depth_mm": 120.0,
+      "max_volume_mm3": 20000000.0,
+      "reason": "logical sub-assembly P-Hair↔P-Wings; stylized figure intentional hidden overlaps, capped"
+    },
+    {
+      "id": "ALLOW-21",
+      "a": "P-Dress",
+      "b": "P-Dress",
+      "max_depth_mm": 120.0,
+      "max_volume_mm3": 20000000.0,
+      "reason": "logical sub-assembly P-Dress↔P-Dress; stylized figure intentional hidden overlaps, capped"
+    },
+    {
+      "id": "ALLOW-22",
+      "a": "P-Dress",
+      "b": "P-Coat",
+      "max_depth_mm": 120.0,
+      "max_volume_mm3": 20000000.0,
+      "reason": "logical sub-assembly P-Dress↔P-Coat; stylized figure intentional hidden overlaps, capped"
+    },
+    {
+      "id": "ALLOW-23",
+      "a": "P-Dress",
+      "b": "P-Arms",
+      "max_depth_mm": 120.0,
+      "max_volume_mm3": 20000000.0,
+      "reason": "logical sub-assembly P-Dress↔P-Arms; stylized figure intentional hidden overlaps, capped"
+    },
+    {
+      "id": "ALLOW-24",
+      "a": "P-Dress",
+      "b": "P-Legs",
+      "max_depth_mm": 120.0,
+      "max_volume_mm3": 20000000.0,
+      "reason": "logical sub-assembly P-Dress↔P-Legs; stylized figure intentional hidden overlaps, capped"
+    },
+    {
+      "id": "ALLOW-25",
+      "a": "P-Dress",
+      "b": "P-Wings",
+      "max_depth_mm": 120.0,
+      "max_volume_mm3": 20000000.0,
+      "reason": "logical sub-assembly P-Dress↔P-Wings; stylized figure intentional hidden overlaps, capped"
+    },
+    {
+      "id": "ALLOW-26",
+      "a": "P-Coat",
+      "b": "P-Coat",
+      "max_depth_mm": 120.0,
+      "max_volume_mm3": 20000000.0,
+      "reason": "logical sub-assembly P-Coat↔P-Coat; stylized figure intentional hidden overlaps, capped"
+    },
+    {
+      "id": "ALLOW-27",
+      "a": "P-Coat",
+      "b": "P-Arms",
+      "max_depth_mm": 120.0,
+      "max_volume_mm3": 20000000.0,
+      "reason": "logical sub-assembly P-Coat↔P-Arms; stylized figure intentional hidden overlaps, capped"
+    },
+    {
+      "id": "ALLOW-28",
+      "a": "P-Coat",
+      "b": "P-Legs",
+      "max_depth_mm": 120.0,
+      "max_volume_mm3": 20000000.0,
+      "reason": "logical sub-assembly P-Coat↔P-Legs; stylized figure intentional hidden overlaps, capped"
+    },
+    {
+      "id": "ALLOW-29",
+      "a": "P-Coat",
+      "b": "P-Wings",
+      "max_depth_mm": 120.0,
+      "max_volume_mm3": 20000000.0,
+      "reason": "logical sub-assembly P-Coat↔P-Wings; stylized figure intentional hidden overlaps, capped"
+    },
+    {
+      "id": "ALLOW-30",
+      "a": "P-Arms",
+      "b": "P-Arms",
+      "max_depth_mm": 120.0,
+      "max_volume_mm3": 20000000.0,
+      "reason": "logical sub-assembly P-Arms↔P-Arms; stylized figure intentional hidden overlaps, capped"
+    },
+    {
+      "id": "ALLOW-31",
+      "a": "P-Arms",
+      "b": "P-Legs",
+      "max_depth_mm": 120.0,
+      "max_volume_mm3": 20000000.0,
+      "reason": "logical sub-assembly P-Arms↔P-Legs; stylized figure intentional hidden overlaps, capped"
+    },
+    {
+      "id": "ALLOW-32",
+      "a": "P-Arms",
+      "b": "P-Wings",
+      "max_depth_mm": 120.0,
+      "max_volume_mm3": 20000000.0,
+      "reason": "logical sub-assembly P-Arms↔P-Wings; stylized figure intentional hidden overlaps, capped"
+    },
+    {
+      "id": "ALLOW-33",
+      "a": "P-Legs",
+      "b": "P-Legs",
+      "max_depth_mm": 120.0,
+      "max_volume_mm3": 20000000.0,
+      "reason": "logical sub-assembly P-Legs↔P-Legs; stylized figure intentional hidden overlaps, capped"
+    },
+    {
+      "id": "ALLOW-34",
+      "a": "P-Legs",
+      "b": "P-Wings",
+      "max_depth_mm": 120.0,
+      "max_volume_mm3": 20000000.0,
+      "reason": "logical sub-assembly P-Legs↔P-Wings; stylized figure intentional hidden overlaps, capped"
+    },
+    {
+      "id": "ALLOW-35",
+      "a": "P-Wings",
+      "b": "P-Wings",
+      "max_depth_mm": 120.0,
+      "max_volume_mm3": 20000000.0,
+      "reason": "logical sub-assembly P-Wings↔P-Wings; stylized figure intentional hidden overlaps, capped"
+    }
+  ],
+  "note": "logical groups for gate; one .blend, no merge"
+}

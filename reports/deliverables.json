@@ -1,0 +1,123 @@
+{
+  "units": "mm",
+  "coordinate": {
+    "up": "Z",
+    "forward": "-Y"
+  },
+  "name": "Reinforce_Eins_TV",
+  "bbox_mm": [
+    -1137.1,
+    -160.5,
+    -0.0,
+    1137.5,
+    335.2,
+    2108.3
+  ],
+  "files": {
+    "Reinforce_Eins_TV.blend": {
+      "bytes": 716882,
+      "md5": "88819435d5d0036b29883bf69b7672b1"
+    },
+    "export/Reinforce_Eins_TV.glb": {
+      "bytes": 1434168,
+      "md5": "4dceed2013330ce8316497a021d02989"
+    },
+    "export/Reinforce_Eins_TV.fbx": {
+      "bytes": 9456956,
+      "md5": "a55b395808136f68fd382b647213f193"
+    },
+    "export/Reinforce_Eins_TV.obj": {
+      "bytes": 2867903,
+      "md5": "6caa9b019c044795d716f62f92635292"
+    },
+    "export/Reinforce_Eins_TV.mtl": {
+      "bytes": 3344,
+      "md5": "8791ccfcf6a6e37315d9a12a55d0c6f3"
+    },
+    "render/qc/front.png": {
+      "bytes": 1652664,
+      "md5": "7bac79974d4f285006f737b86f5f5349"
+    },
+    "render/qc/side.png": {
+      "bytes": 1586714,
+      "md5": "3936da720042fce2738b32bb394fb9c6"
+    },
+    "render/qc/back.png": {
+      "bytes": 1618967,
+      "md5": "2bad7dd73f79c26dc80e4a5c19e14624"
+    },
+    "render/qc/three_quarter.png": {
+      "bytes": 1615591,
+      "md5": "3d5eeb6858f6c2db25f4c869ba203a48"
+    },
+    "render/final/hero.png": {
+      "bytes": 2254292,
+      "md5": "99cc966b07bdbef648821a3408616f47"
+    },
+    "render/final/portrait.png": {
+      "bytes": 1389704,
+      "md5": "d7b6d0820d02dec1bf9ec8b007d43657"
+    },
+    "render/final/contact_sheet.png": {
+      "bytes": 886741,
+      "md5": "e387f3ee6cdf0b657b04abbcd323e441"
+    },
+    "render/final/compare_ref.png": {
+      "bytes": 571740,
+      "md5": "fe816fac000ee3148b62e1ce36109d80"
+    },
+    "render/rig/pose_sheet.png": {
+      "bytes": 937580,
+      "md5": "5f2cfdf8f22ccf5dd816713035533533"
+    },
+    "reports/assembly.json": {
+      "bytes": 17306,
+      "md5": "cc329f8d15c4a0ea783270c870936446"
+    },
+    "reports/audit_scene.txt": {
+      "bytes": 12391,
+      "md5": "daadf284c8381f46e5655d647006c86c"
+    },
+    "reports/asm_scan.txt": {
+      "bytes": 7434,
+      "md5": "306cee9a6cd7e1c29f9e127cab2c5f93"
+    },
+    "reports/asm_gate.txt": {
+      "bytes": 7887,
+      "md5": "3dab58f33168609d7f22f7d70a466fca"
+    },
+    "spec.json": {
+      "bytes": 4042,
+      "md5": "0ace2848dd78f5ccd8d3da492d19dff3"
+    },
+    "spec.md": {
+      "bytes": 4775,
+      "md5": "e6109eea82dc1b7feb749d11e179f6c9"
+    },
+    "README.md": {
+      "bytes": 7019,
+      "md5": "3f223a4024307d152b3d668f2271a493"
+    },
+    "reports/qc_report.md": {
+      "bytes": 4405,
+      "md5": "73f527635f8bb15c00c569ba903232fb"
+    },
+    "reports/rig_report.md": {
+      "bytes": 4579,
+      "md5": "6b65315998f57022c032bcc3f03b3a6e"
+    },
+    "reports/measures.json": {
+      "bytes": 470,
+      "md5": "f73492e870a3093968cfdc82411d495a"
+    }
+  },
+  "rig": {
+    "armature": "RIG-Reinforce",
+    "bones": 80,
+    "actions": [
+      "Idle",
+      "WingFlap"
+    ]
+  },
+  "note": "GLB/FBX contain skin + Idle/WingFlap actions; OBJ is static rest-pose export."
+}
