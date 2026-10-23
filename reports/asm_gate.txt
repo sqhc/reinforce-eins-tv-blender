@@ -142,7 +142,7 @@ PLAN asm_gate ok · 7210 chars · verdict=pass · export_allowed 仅 verdict=pas
      "a": "P-Body",
      "b": "P-Arms",
      "state": "contact",
-     "gap_mm": 6.7744,
+     "gap_mm": 6.7617,
      "limit_mm": 12
     },
     {
@@ -220,13 +220,13 @@ PLAN asm_gate ok · 7210 chars · verdict=pass · export_allowed 仅 verdict=pas
      "id": "IF-04",
      "a": "P-Body",
      "b": "P-Arms",
-     "measured_gap_mm": 6.7744,
+     "measured_gap_mm": 6.7617,
      "bbox_gap_mm": 217.1813,
      "expected_mm": 0,
      "tol_mm": 12,
-     "deviation_mm": 6.7744,
+     "deviation_mm": 6.7617,
      "state": "pass",
-     "why": "接口 IF-04 实测单边间隙 6.774 mm，期望 0.000 ± 12.000 mm"
+     "why": "接口 IF-04 实测单边间隙 6.762 mm，期望 0.000 ± 12.000 mm"
     },
     {
      "kind": "interface",
@@ -308,7 +308,7 @@ PLAN asm_gate ok · 7210 chars · verdict=pass · export_allowed 仅 verdict=pas
  "manifest": {
   "assembly": "Reinforce_Eins_TV",
   "sealed": false,
-  "manifest_md5": "730573bb041d0b90e7813f036ccfc06ef8e3510dce3fb87a84d1d5088eed6ce8",
+  "manifest_md5": "ee608d6b49e8eab9f19107c4363bd18908c5521f6658d877102ebdfffe53e732",
   "counts": {
    "parts": 8,
    "interfaces": 7,
@@ -333,9 +333,9 @@ PLAN asm_gate ok · 7210 chars · verdict=pass · export_allowed 仅 verdict=pas
   "md_errors": {},
   "hidden_skipped": 0
  },
- "receipt_md5": "79f2e391764dd35f29796def4f0ce8923d9cf068a1c64bf9a9e2814fe8a536be",
+ "receipt_md5": "0cb35ac4c5392e4a37ac0cdd5ca4fd6e990816af4c4e6a1311548a6354edd870",
  "units": {
   "mm_per_unit": 1000
  },
- "ms": 27880
+ "ms": 27546
 }
