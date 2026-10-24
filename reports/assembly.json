@@ -14,7 +14,7 @@
     {
       "id": "P-Body",
       "file": "/Users/shenqing/Desktop/Deepseek Harness/Model_test/Reinforce_Eins_TV.blend",
-      "file_md5": "36ab5a14d1ed4454569a701507aee12177852d9203f7969dba4d7d8222d8904f",
+      "file_md5": "64fbbe8b1d27abfbd264d1a4d1b1e92afa846e45e4e294a50aa1ba9c06b07755",
       "objects": [
         "GEO-Arm_L",
         "GEO-Arm_R",
@@ -44,7 +44,7 @@
     {
       "id": "P-Head",
       "file": "/Users/shenqing/Desktop/Deepseek Harness/Model_test/Reinforce_Eins_TV.blend",
-      "file_md5": "36ab5a14d1ed4454569a701507aee12177852d9203f7969dba4d7d8222d8904f",
+      "file_md5": "64fbbe8b1d27abfbd264d1a4d1b1e92afa846e45e4e294a50aa1ba9c06b07755",
       "objects": [
         "GEO-Brow_L",
         "GEO-Brow_R",
@@ -75,7 +75,7 @@
     {
       "id": "P-Hair",
       "file": "/Users/shenqing/Desktop/Deepseek Harness/Model_test/Reinforce_Eins_TV.blend",
-      "file_md5": "36ab5a14d1ed4454569a701507aee12177852d9203f7969dba4d7d8222d8904f",
+      "file_md5": "64fbbe8b1d27abfbd264d1a4d1b1e92afa846e45e4e294a50aa1ba9c06b07755",
       "objects": [
         "GEO-Hair_Back_0",
         "GEO-Hair_Back_1",
@@ -123,7 +123,7 @@
     {
       "id": "P-Dress",
       "file": "/Users/shenqing/Desktop/Deepseek Harness/Model_test/Reinforce_Eins_TV.blend",
-      "file_md5": "36ab5a14d1ed4454569a701507aee12177852d9203f7969dba4d7d8222d8904f",
+      "file_md5": "64fbbe8b1d27abfbd264d1a4d1b1e92afa846e45e4e294a50aa1ba9c06b07755",
       "objects": [
         "GEO-Belt",
         "GEO-Belt_Stud_0",
@@ -171,7 +171,7 @@
     {
       "id": "P-Coat",
       "file": "/Users/shenqing/Desktop/Deepseek Harness/Model_test/Reinforce_Eins_TV.blend",
-      "file_md5": "36ab5a14d1ed4454569a701507aee12177852d9203f7969dba4d7d8222d8904f",
+      "file_md5": "64fbbe8b1d27abfbd264d1a4d1b1e92afa846e45e4e294a50aa1ba9c06b07755",
       "objects": [
         "GEO-Coat_Back_L",
         "GEO-Coat_Back_R",
@@ -200,7 +200,7 @@
     {
       "id": "P-Arms",
       "file": "/Users/shenqing/Desktop/Deepseek Harness/Model_test/Reinforce_Eins_TV.blend",
-      "file_md5": "36ab5a14d1ed4454569a701507aee12177852d9203f7969dba4d7d8222d8904f",
+      "file_md5": "64fbbe8b1d27abfbd264d1a4d1b1e92afa846e45e4e294a50aa1ba9c06b07755",
       "objects": [
         "GEO-Finger_L_0",
         "GEO-Finger_L_1",
@@ -241,16 +241,22 @@
     {
       "id": "P-Legs",
       "file": "/Users/shenqing/Desktop/Deepseek Harness/Model_test/Reinforce_Eins_TV.blend",
-      "file_md5": "36ab5a14d1ed4454569a701507aee12177852d9203f7969dba4d7d8222d8904f",
+      "file_md5": "64fbbe8b1d27abfbd264d1a4d1b1e92afa846e45e4e294a50aa1ba9c06b07755",
       "objects": [
-        "GEO-Boot_L",
-        "GEO-Boot_R",
-        "GEO-Boot_Sole_L",
-        "GEO-Boot_Sole_R",
-        "GEO-Boot_Trim_L",
-        "GEO-Boot_Trim_R",
-        "GEO-Stocking_L",
-        "GEO-Stocking_R"
+        "GEO-Shoe_Cuff_L",
+        "GEO-Shoe_Cuff_R",
+        "GEO-Shoe_CuffGold_L",
+        "GEO-Shoe_CuffGold_R",
+        "GEO-Shoe_Heel_L",
+        "GEO-Shoe_Heel_R",
+        "GEO-Shoe_L",
+        "GEO-Shoe_R",
+        "GEO-Shoe_Toe_L",
+        "GEO-Shoe_Toe_R",
+        "GEO-Shoe_ToeGold_L",
+        "GEO-Shoe_ToeGold_R",
+        "GEO-Sock_Short_L",
+        "GEO-Stocking_Long_R"
       ],
       "transform": {
         "loc_mm": [
@@ -274,7 +280,7 @@
     {
       "id": "P-Wings",
       "file": "/Users/shenqing/Desktop/Deepseek Harness/Model_test/Reinforce_Eins_TV.blend",
-      "file_md5": "36ab5a14d1ed4454569a701507aee12177852d9203f7969dba4d7d8222d8904f",
+      "file_md5": "64fbbe8b1d27abfbd264d1a4d1b1e92afa846e45e4e294a50aa1ba9c06b07755",
       "objects": [
         "GEO-Wing_Lower_L_Covert",
         "GEO-Wing_Lower_L_Fan",

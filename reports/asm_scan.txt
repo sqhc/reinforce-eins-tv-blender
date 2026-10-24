@@ -1,10 +1,10 @@
-PLAN asm_scan ok · 6901 chars · verdict=pass
+PLAN asm_scan ok · 6969 chars · verdict=pass
 {
  "ok": true,
  "verdict": "pass",
  "analyzed": true,
  "readonly": true,
- "objects": 93,
+ "objects": 99,
  "object_names": [
   "GEO-Body",
   "GEO-Arm_L",
@@ -83,14 +83,20 @@ PLAN asm_scan ok · 6901 chars · verdict=pass
   "GEO-Finger_R_2",
   "GEO-Finger_R_3",
   "GEO-Thumb_R",
-  "GEO-Stocking_L",
-  "GEO-Stocking_R",
-  "GEO-Boot_L",
-  "GEO-Boot_Trim_L",
-  "GEO-Boot_Sole_L",
-  "GEO-Boot_R",
-  "GEO-Boot_Trim_R",
-  "GEO-Boot_Sole_R",
+  "GEO-Shoe_L",
+  "GEO-Shoe_Toe_L",
+  "GEO-Shoe_Cuff_L",
+  "GEO-Shoe_CuffGold_L",
+  "GEO-Shoe_Heel_L",
+  "GEO-Shoe_ToeGold_L",
+  "GEO-Shoe_R",
+  "GEO-Shoe_Toe_R",
+  "GEO-Shoe_Cuff_R",
+  "GEO-Shoe_CuffGold_R",
+  "GEO-Shoe_Heel_R",
+  "GEO-Shoe_ToeGold_R",
+  "GEO-Stocking_Long_R",
+  "GEO-Sock_Short_L",
   "GEO-Wing_Upper_L_Fan",
   "GEO-Wing_Upper_L_Covert",
   "GEO-Wing_Lower_L_Fan",
@@ -102,30 +108,30 @@ PLAN asm_scan ok · 6901 chars · verdict=pass
  ],
  "counts": {
   "clash": 0,
-  "hidden_ok": 196,
+  "hidden_ok": 200,
   "contact": 3,
-  "gap": 273,
+  "gap": 276,
   "float": 0,
   "contained": 0,
   "unresolved": 0,
-  "gap_far": 3806,
-  "candidates": 432,
+  "gap_far": 4372,
+  "candidates": 439,
   "near_pairs": 40,
-  "tested": 472,
-  "pairs_total": 4278
+  "tested": 479,
+  "pairs_total": 4851
  },
  "coverage": {
-  "objects": 93,
-  "aabb_pairs": 432,
+  "objects": 99,
+  "aabb_pairs": 439,
   "near_pairs": 40,
-  "tested": 472,
+  "tested": 479,
   "complete": true,
   "truncated": false,
   "budget_hit": false,
   "unresolved_objects": [],
   "md_errors": {}
  },
- "verdict_line": "扫了 93 件 / 472 对候选：clash=0 contained=0 hidden_ok=196 contact=3 gap=273 float=0 unresolved=0 → pass",
+ "verdict_line": "扫了 99 件 / 479 对候选：clash=0 contained=0 hidden_ok=200 contact=3 gap=276 float=0 unresolved=0 → pass",
  "thresholds": {
   "depth_eps_mm": 0.2,
   "contact_eps_mm": 0.3,
@@ -300,7 +306,7 @@ PLAN asm_scan ok · 6901 chars · verdict=pass
  "manifest": {
   "assembly": "Reinforce_Eins_TV",
   "sealed": false,
-  "manifest_md5": "ee608d6b49e8eab9f19107c4363bd18908c5521f6658d877102ebdfffe53e732",
+  "manifest_md5": "62695b4704fd196eb703e24274eedac6273d152c7752826cfa97b90f10f46f37",
   "counts": {
    "parts": 8,
    "interfaces": 7,
@@ -308,13 +314,8 @@ PLAN asm_scan ok · 6901 chars · verdict=pass
   }
  },
  "contract": {
-  "objects": 93,
-  "pairs_aabb": 432,
-  "pairs_tested": 432,
-  "pairs_checked": 432,
-  "pairs_overlapping": 196,
-  "exempted_count": 0,
-  "used": true
+  "used": false,
+  "reason": "K.dsh_contract_api 不存在（preload 里带 contract）"
  },
  "honest_limits": [
   "深度/体积是采样式估计（低差异序列，非随机；contract 复用时为对方口径），同输入同输出",
@@ -338,5 +339,5 @@ PLAN asm_scan ok · 6901 chars · verdict=pass
  "units": {
   "mm_per_unit": 1000
  },
- "ms": 20870
+ "ms": 6831
 }

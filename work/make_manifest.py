@@ -13,7 +13,7 @@ for n in meshes:
     elif n.startswith(('GEO-Dress','GEO-Belt')): put('P-Dress',n)
     elif n.startswith('GEO-Coat'): put('P-Coat',n)
     elif n.startswith(('GEO-Glove','GEO-Hand','GEO-Finger','GEO-Thumb')): put('P-Arms',n)
-    elif n.startswith(('GEO-Stocking','GEO-Boot')): put('P-Legs',n)
+    elif n.startswith(('GEO-Stocking','GEO-Sock','GEO-Shoe','GEO-Boot')): put('P-Legs',n)
     elif n.startswith('GEO-Wing'): put('P-Wings',n)
     else: print('UNASSIGNED',n)
 parts=[]

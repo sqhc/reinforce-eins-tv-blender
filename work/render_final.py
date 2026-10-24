@@ -60,6 +60,7 @@ camera('CAM_Side',(4.8,0,1.02),(0,0,0.98),62)
 camera('CAM_Back',(0,4.8,1.02),(0,0,0.98),62)
 camera('CAM_Hero',(2.6,-3.2,0.95),(0,0,1.15),52)
 camera('CAM_Portrait',(0.85,-1.95,1.52),(0,0,1.42),85)
+camera('CAM_Lower',(0,-2.4,0.55),(0,0,0.30),80)
 
 sc.render.engine='BLENDER_EEVEE'
 sc.render.image_settings.file_format='PNG'
@@ -73,6 +74,7 @@ views=[
  ('render/qc/three_quarter.png','CAM_ThreeQ',1000,1500),
  ('render/final/hero.png','CAM_Hero',1080,1920),
  ('render/final/portrait.png','CAM_Portrait',1000,1200),
+ ('render/final/lower_body.png','CAM_Lower',1000,1000),
 ]
 base=r"/Users/shenqing/Desktop/Deepseek Harness/Model_test/"
 import os

@@ -1,10 +1,12 @@
 # 绑定报告 · RIG-Reinforce（v2）
 
+v3 修正：鞋改为黑色高跟踝鞋（尖头、粗跟、踝环、金色装饰），不是靴；袜按参考做成角色左短右长的不对称。
+
 ## 1. 骨架
 - 名称：RIG-Reinforce
 - 骨数：**80**
 - rest pose：A-pose
-- 93 个 mesh 全部有 Armature 修改器，父级为 RIG-Reinforce。
+- 99 个 mesh 全部有 Armature 修改器，父级为 RIG-Reinforce。
 
 ### 层级（概要）
     root
@@ -35,8 +37,8 @@
 ## 3. 蒙皮
 | 指标 | 数值 |
 |---|---|
-| mesh 对象 | 93 |
-| 顶点 | 21,160 |
+| mesh 对象 | 99 |
+| 顶点 | 21,840 |
 | 未加权顶点 | **0** |
 | 每顶点最大影响 | **3** |
 | 躯干/衣服 | 按高度在 pelvis/spine/chest/neck 之间线性混合 |
@@ -44,7 +46,9 @@
 | 袖 | 100% upperarm（v2 修正，抬臂时袖子跟随；肩补片填缝） |
 | 手套 | forearm + 腕部 hand 混合 |
 | 手掌 | 100% hand；手指/拇指按 2 节骨沿指长混合 |
-| 袜/靴 | shin/thigh、foot/shin 分区 |
+| 长筒袜（角色右） | shin/thigh 按高度混合；鞋内一段归 foot |
+| 短袜（角色左） | foot/shin 分区（短袜在鞋口上方） |
+| 鞋 | 鞋体/鞋跟/鞋头/金饰 100% foot；踝环 100% foot |
 | 头发 | head + hair_back / hair_side 按高度混合 |
 | 外套 | coat_back/side 两节 + pelvis 顶部 |
 | 裙 | 顶部 pelvis + 下摆按角度分到 skirt_F/B/L/R |
@@ -63,13 +67,13 @@
 ## 5. 极限姿态测试（render/rig/pose_sheet.png，6 格）
 1. REST A-POSE：正常，IK rest 偏差 ≤1 mm。
 2. ARMS UP (FK)：袖子已改为 100% upperarm，跟随抬臂；肩补片填住肩缝。
-3. CROUCH (FK)：腿/靴/袜跟随；裙主要由 pelvis/裙骨控制，深蹲时仍有少量穿插。
+3. CROUCH (FK)：腿/鞋/袜跟随；裙主要由 pelvis/裙骨控制，深蹲时仍有少量穿插。
 4. WING FLAP：3 节翼骨链正常，覆羽跟随。
-5. IK ARMS + LEGS：移动 CTRL-hand_IK / CTRL-foot_IK 后可摆出抬臂+屈腿姿态；极值下膝部袜/靴有少量皮肤露出。
+5. IK ARMS + LEGS：移动 CTRL-hand_IK / CTRL-foot_IK 后可摆出抬臂+屈腿姿态；极值下膝部袜/鞋有少量皮肤露出。
 6. FINGERS + SKIRT：手指骨弯曲、裙骨摆动可见；程序化权重在极值时略硬。
 
 ## 6. 导出复验
-- export/Reinforce_Eins_TV.glb：93 个 GEO mesh、80 骨、1 skin、Idle/WingFlap；重导入后 80 骨与两段 Action 均在。
+- export/Reinforce_Eins_TV.glb：99 个 GEO mesh、80 骨、1 skin、Idle/WingFlap；重导入后 80 骨与两段 Action 均在。
 - export/Reinforce_Eins_TV.fbx：带骨架/蒙皮/动作（9.0 MB）。
 - export/Reinforce_Eins_TV.obj：静态 A-pose，无骨架（查看/打印前处理用）。
 - 注意：GLB/FBX 不含 IK 约束；如果引擎里需要 IK 效果，先在 Blender 用 IK 摆姿并 Bake Action 到 deform 骨，再导出。

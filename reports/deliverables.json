@@ -7,108 +7,116 @@
   "name": "Reinforce_Eins_TV",
   "bbox_mm": [
     -1137.1,
-    -160.5,
-    -0.0,
+    -182.7,
+    -0.9,
     1137.5,
     335.2,
     2108.3
   ],
   "files": {
     "Reinforce_Eins_TV.blend": {
-      "bytes": 717490,
-      "md5": "983a49b9dc5371192719bf02e37eea4b"
+      "bytes": 722076,
+      "md5": "f78c68e6087954a57f9b5faf27395c7d"
     },
     "export/Reinforce_Eins_TV.glb": {
-      "bytes": 1434168,
-      "md5": "4dceed2013330ce8316497a021d02989"
+      "bytes": 1469152,
+      "md5": "1d4d2db4e85ceb81c82f1d40a59a99eb"
     },
     "export/Reinforce_Eins_TV.fbx": {
-      "bytes": 9456956,
-      "md5": "aa2fea6da18a730d8e58d8a58ef84614"
+      "bytes": 9935932,
+      "md5": "7cc97aeec791e865526134bc48c841c1"
     },
     "export/Reinforce_Eins_TV.obj": {
-      "bytes": 2867903,
-      "md5": "6caa9b019c044795d716f62f92635292"
+      "bytes": 2937973,
+      "md5": "18425cf7909113396d3071b395b1a892"
     },
     "export/Reinforce_Eins_TV.mtl": {
       "bytes": 3344,
       "md5": "8791ccfcf6a6e37315d9a12a55d0c6f3"
     },
     "render/qc/front.png": {
-      "bytes": 1652664,
-      "md5": "7bac79974d4f285006f737b86f5f5349"
+      "bytes": 1649029,
+      "md5": "40bc406854fa75a15032ce47d67e07b8"
     },
     "render/qc/side.png": {
-      "bytes": 1586714,
-      "md5": "3936da720042fce2738b32bb394fb9c6"
+      "bytes": 1585943,
+      "md5": "c225d53132be762a5147777ab7fe2a52"
     },
     "render/qc/back.png": {
-      "bytes": 1618967,
-      "md5": "2bad7dd73f79c26dc80e4a5c19e14624"
+      "bytes": 1616857,
+      "md5": "2d230c7d347afd15570c957852091051"
     },
     "render/qc/three_quarter.png": {
-      "bytes": 1615591,
-      "md5": "3d5eeb6858f6c2db25f4c869ba203a48"
+      "bytes": 1612652,
+      "md5": "fbc63b07731255966a7f60360a7005ef"
     },
     "render/final/hero.png": {
-      "bytes": 2254292,
-      "md5": "99cc966b07bdbef648821a3408616f47"
+      "bytes": 2250121,
+      "md5": "106b906c68fb47d5658f04d8b298dfb2"
     },
     "render/final/portrait.png": {
-      "bytes": 1389704,
-      "md5": "d7b6d0820d02dec1bf9ec8b007d43657"
+      "bytes": 1377166,
+      "md5": "85222a4e753a6080faa306a91f34be03"
     },
     "render/final/contact_sheet.png": {
-      "bytes": 886741,
-      "md5": "e387f3ee6cdf0b657b04abbcd323e441"
+      "bytes": 883413,
+      "md5": "e368a0f31c9da7f173b87f1effd9654a"
     },
     "render/final/compare_ref.png": {
-      "bytes": 571740,
-      "md5": "fe816fac000ee3148b62e1ce36109d80"
+      "bytes": 570900,
+      "md5": "09aac828abf988098b0293399892c128"
+    },
+    "render/final/lower_body.png": {
+      "bytes": 1070051,
+      "md5": "2dbeafc4394365899b7a5d4ab5680342"
+    },
+    "render/anim/turntable.mp4": {
+      "bytes": 385050,
+      "md5": "d2f8acc53e4001bbc56fff1eef5f514b"
     },
     "render/rig/pose_sheet.png": {
-      "bytes": 937580,
-      "md5": "5f2cfdf8f22ccf5dd816713035533533"
+      "bytes": 932345,
+      "md5": "cd45ce30e2733615954c000577c50f7c"
     },
     "reports/assembly.json": {
-      "bytes": 17306,
-      "md5": "1531319a3f86ec910ff52f1be6499bd4"
+      "bytes": 17487,
+      "md5": "85907cf8e43eef3d1741af090ed1748b"
     },
     "reports/audit_scene.txt": {
       "bytes": 12391,
-      "md5": "daadf284c8381f46e5655d647006c86c"
+      "md5": "eb4e2f59bbc43ad6d9512d6649674387"
     },
     "reports/asm_scan.txt": {
-      "bytes": 7434,
-      "md5": "b96130b0fdcc5530b29ee9519f8ada38"
+      "bytes": 7516,
+      "md5": "64c873e2d2ee8b4857dfdf14b3a1526e"
     },
     "reports/asm_gate.txt": {
-      "bytes": 7887,
-      "md5": "d1349e8a78774ea72c63ce2b5c7c3783"
+      "bytes": 7810,
+      "md5": "36cd5fbdeaf8cc558f04da6e0d04b641"
     },
     "spec.json": {
-      "bytes": 4042,
-      "md5": "0ace2848dd78f5ccd8d3da492d19dff3"
+      "bytes": 3715,
+      "md5": "9e8c0ae50be6de8466ea670c0ed94251"
     },
     "spec.md": {
-      "bytes": 4775,
-      "md5": "e6109eea82dc1b7feb749d11e179f6c9"
+      "bytes": 5026,
+      "md5": "f1ed9ea734d4de3805888559591caf0c"
     },
     "README.md": {
-      "bytes": 7019,
-      "md5": "3f223a4024307d152b3d668f2271a493"
+      "bytes": 7607,
+      "md5": "5e550b81324583b585b34e72c68b9bf2"
     },
     "reports/qc_report.md": {
-      "bytes": 4405,
-      "md5": "73f527635f8bb15c00c569ba903232fb"
+      "bytes": 4569,
+      "md5": "f12a8e1dffffc0ee4d260e3068115983"
     },
     "reports/rig_report.md": {
-      "bytes": 4579,
-      "md5": "6b65315998f57022c032bcc3f03b3a6e"
+      "bytes": 4907,
+      "md5": "ec89927629d1c132b91db30c237f6046"
     },
     "reports/measures.json": {
       "bytes": 470,
-      "md5": "f73492e870a3093968cfdc82411d495a"
+      "md5": "0d8e05422ab55c655f4082d84b47e7b5"
     }
   },
   "rig": {

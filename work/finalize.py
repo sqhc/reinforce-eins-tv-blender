@@ -19,7 +19,7 @@ files=["Reinforce_Eins_TV.blend","export/Reinforce_Eins_TV.glb","export/Reinforc
        "export/Reinforce_Eins_TV.obj","export/Reinforce_Eins_TV.mtl",
        "render/qc/front.png","render/qc/side.png","render/qc/back.png","render/qc/three_quarter.png",
        "render/final/hero.png","render/final/portrait.png","render/final/contact_sheet.png",
-       "render/final/compare_ref.png","render/rig/pose_sheet.png",
+       "render/final/compare_ref.png","render/final/lower_body.png","render/anim/turntable.mp4","render/rig/pose_sheet.png",
        "reports/assembly.json","reports/audit_scene.txt","reports/asm_scan.txt","reports/asm_gate.txt",
        "spec.json","spec.md","README.md","reports/qc_report.md","reports/rig_report.md","reports/measures.json"]
 out={}

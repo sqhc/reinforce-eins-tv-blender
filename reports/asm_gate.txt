@@ -1,4 +1,4 @@
-PLAN asm_gate ok · 7210 chars · verdict=pass · export_allowed 仅 verdict=pass 为 true；degraded=没查完/未确认，不是通过
+PLAN asm_gate ok · 7119 chars · verdict=pass · export_allowed 仅 verdict=pass 为 true；degraded=没查完/未确认，不是通过
 {
  "ok": true,
  "verdict": "pass",
@@ -13,8 +13,8 @@ PLAN asm_gate ok · 7210 chars · verdict=pass · export_allowed 仅 verdict=pas
    "receipt": {
     "mode": "audit_mesh",
     "totals": {
-     "objects": 93,
-     "tris": 42036,
+     "objects": 99,
+     "tris": 43380,
      "boundary_edges": 0,
      "nonmanifold_edges": 0,
      "degenerate_faces": 0,
@@ -25,7 +25,7 @@ PLAN asm_gate ok · 7210 chars · verdict=pass · export_allowed 仅 verdict=pas
      "empty_objects": 0,
      "loose_edges": 0,
      "normals_unknown": 0,
-     "normals_checked": 93,
+     "normals_checked": 99,
      "normals_multi_shell": 0,
      "analysis_incomplete": 0
     },
@@ -37,35 +37,35 @@ PLAN asm_gate ok · 7210 chars · verdict=pass · export_allowed 仅 verdict=pas
    "state": "pass",
    "inverted": [],
    "unknown": [],
-   "checked": 93,
-   "reason": "闭合件法线全部朝外（93 个已判）"
+   "checked": 99,
+   "reason": "闭合件法线全部朝外（99 个已判）"
   },
   {
    "id": "clash_all",
    "state": "pass",
-   "reason": "扫了 93 件 / 472 对候选：clash=0 contained=0 hidden_ok=196 contact=3 gap=273 float=0 unresolved=0 → pass",
+   "reason": "扫了 99 件 / 479 对候选：clash=0 contained=0 hidden_ok=200 contact=3 gap=276 float=0 unresolved=0 → pass",
    "receipt": {
     "ok": true,
     "verdict": "pass",
     "counts": {
      "clash": 0,
-     "hidden_ok": 196,
+     "hidden_ok": 200,
      "contact": 3,
-     "gap": 273,
+     "gap": 276,
      "float": 0,
      "contained": 0,
      "unresolved": 0,
-     "gap_far": 3806,
-     "candidates": 432,
+     "gap_far": 4372,
+     "candidates": 439,
      "near_pairs": 40,
-     "tested": 472,
-     "pairs_total": 4278
+     "tested": 479,
+     "pairs_total": 4851
     },
     "coverage": {
-     "objects": 93,
-     "aabb_pairs": 432,
+     "objects": 99,
+     "aabb_pairs": 439,
      "near_pairs": 40,
-     "tested": 472,
+     "tested": 479,
      "complete": true,
      "truncated": false,
      "budget_hit": false,
@@ -83,13 +83,8 @@ PLAN asm_gate ok · 7210 chars · verdict=pass · export_allowed 仅 verdict=pas
     "pairs_total": 0,
     "state": "pass",
     "contract": {
-     "objects": 93,
-     "pairs_aabb": 432,
-     "pairs_tested": 432,
-     "pairs_checked": 432,
-     "pairs_overlapping": 196,
-     "exempted_count": 0,
-     "used": true
+     "used": false,
+     "reason": "K.dsh_contract_api 不存在（preload 里带 contract）"
     }
    }
   },
@@ -150,7 +145,7 @@ PLAN asm_gate ok · 7210 chars · verdict=pass · export_allowed 仅 verdict=pas
      "a": "P-Body",
      "b": "P-Legs",
      "state": "contact",
-     "gap_mm": 3.3845,
+     "gap_mm": 3.6584,
      "limit_mm": 12
     },
     {
@@ -233,13 +228,13 @@ PLAN asm_gate ok · 7210 chars · verdict=pass · export_allowed 仅 verdict=pas
      "id": "IF-05",
      "a": "P-Body",
      "b": "P-Legs",
-     "measured_gap_mm": 3.3845,
-     "bbox_gap_mm": 138.7978,
+     "measured_gap_mm": 3.6584,
+     "bbox_gap_mm": 584.9172,
      "expected_mm": 0,
      "tol_mm": 12,
-     "deviation_mm": 3.3845,
+     "deviation_mm": 3.6584,
      "state": "pass",
-     "why": "接口 IF-05 实测单边间隙 3.385 mm，期望 0.000 ± 12.000 mm"
+     "why": "接口 IF-05 实测单边间隙 3.658 mm，期望 0.000 ± 12.000 mm"
     },
     {
      "kind": "interface",
@@ -280,9 +275,9 @@ PLAN asm_gate ok · 7210 chars · verdict=pass · export_allowed 仅 verdict=pas
  "trend": {
   "clash": 0,
   "contained": 0,
-  "hidden_ok": 196,
+  "hidden_ok": 200,
   "contact": 3,
-  "gap": 273,
+  "gap": 276,
   "unresolved": 0,
   "float": 0,
   "max_depth_mm": 64.5426
@@ -308,7 +303,7 @@ PLAN asm_gate ok · 7210 chars · verdict=pass · export_allowed 仅 verdict=pas
  "manifest": {
   "assembly": "Reinforce_Eins_TV",
   "sealed": false,
-  "manifest_md5": "ee608d6b49e8eab9f19107c4363bd18908c5521f6658d877102ebdfffe53e732",
+  "manifest_md5": "62695b4704fd196eb703e24274eedac6273d152c7752826cfa97b90f10f46f37",
   "counts": {
    "parts": 8,
    "interfaces": 7,
@@ -329,13 +324,13 @@ PLAN asm_gate ok · 7210 chars · verdict=pass · export_allowed 仅 verdict=pas
   "本版不出穿透特写图（shots 恒 skipped），图只作证据、结论仍以数字为准"
  ],
  "trace": {
-  "objects": 93,
+  "objects": 99,
   "md_errors": {},
   "hidden_skipped": 0
  },
- "receipt_md5": "0cb35ac4c5392e4a37ac0cdd5ca4fd6e990816af4c4e6a1311548a6354edd870",
+ "receipt_md5": "43ed1e0dc87a75ad5150f7947de924d2a916b4a7a1264c77e0ed60ef6b24d101",
  "units": {
   "mm_per_unit": 1000
  },
- "ms": 27546
+ "ms": 11925
 }

@@ -1,8 +1,8 @@
 # Reinforce Eins（TV版）· DSH × Blender 建模交付（v2 绑定升级）
 
-这是用 **Blender 5.2.2 + dsh-blender-plugin v2.6.1** 从零制作的《魔法少女リリカルなのはA's》角色 **Reinforce Eins（リインフォース）TV版** 风格化 3D 展示模型。v2 在 v1 基础上升级了绑定：**补回双手/手指、加腿/手 IK 控制、20 根手指/拇指骨、4 根裙骨**，并重新过门、渲染和导出。
+这是用 **Blender 5.2.2 + dsh-blender-plugin v2.6.1** 从零制作的《魔法少女リリカルなのはA's》角色 **Reinforce Eins（リインフォース）TV版** 风格化 3D 展示模型。v2 在 v1 基础上升级了绑定：**补回双手/手指、加腿/手 IK 控制、20 根手指/拇指骨、4 根裙骨**。v3 按参考图修正了下半身：**鞋是黑色高跟踝鞋（不是靴）**，**袜子是角色左短右长的不对称设计**，并重新过门、渲染和导出。
 
-> 设计取向：TV 版（保留头侧羽饰、红瞳不加高光、两对黑羽、黑裙金边）。不是 Movie 2nd A's 版，也不是 Reinforce II。参考图里的黄底黑连体衣形象判断为游戏/其他版本，只借了腿部/靴子比例。
+> 设计取向：TV 版（保留头侧羽饰、红瞳不加高光、两对黑羽、黑裙金边）。不是 Movie 2nd A's 版，也不是 Reinforce II。参考图里的黄底黑连体衣形象判断为游戏/其他版本，只借了腿部/鞋袜比例。
 
 ## 1. 先看什么
 
@@ -13,6 +13,8 @@
 | render/final/compare_ref.png | 与提供的 TV 版参考并排对比 |
 | render/rig/pose_sheet.png | 绑定测试 6 格：A-pose / 举臂 / 下蹲 / 拍翼 / IK 四肢 / 手指+裙骨 |
 | render/final/portrait.png | 半身像 |
+| render/final/lower_body.png | 下半身特写（鞋/不对称袜） |
+| render/anim/turntable.mp4 | 2s 转台（48 帧，800×1200） |
 | render/qc/front.png 等 | 四视图单张 |
 | Reinforce_Eins_TV.blend | 可编辑工程（RIG-Reinforce、蒙皮、Idle/WingFlap） |
 | export/Reinforce_Eins_TV.glb | 带骨架（80 骨）+ 蒙皮 + Idle/WingFlap 的 GLB |
@@ -55,9 +57,9 @@
 ## 3. 规格与验收（结果）
 
 - 身高 **1680 mm**，头高 **224 mm**，**7.5 头身**；翼展约 **2274.7 mm**（设计目标 2400，实际偏窄 5.2%，见 spec）。
-- **93 个网格对象**，**21,160 顶点 / 42,036 三角面**；**80 根骨**；最大每顶点 **3 个骨骼影响**；**0 个未加权顶点**。
-- audit_scene：**pass**（93 件；boundary/nonmanifold/degenerate/loose/self-intersections=0；法线 0 个朝内）。
-- asm_scan：**pass**（93 件；clash=0、contained=0、float=0、unresolved=0；196 对按组级 allow 登记为设计内隐藏交叠）。
+- **99 个网格对象**，**21,840 顶点 / 43,380 三角面**；**80 根骨**；最大每顶点 **3 个骨骼影响**；**0 个未加权顶点**。
+- audit_scene：**pass**（99 件；boundary/nonmanifold/degenerate/loose/self-intersections=0；法线 0 个朝内）。
+- asm_scan：**pass**（99 件；clash=0、contained=0、float=0、unresolved=0；200 对按组级 allow 登记为设计内隐藏交叠）。
 - asm_gate：**pass**，export_allowed=true（mesh/normals/clash/floaters/interfaces/measure 全过）。
 - GLB 重导入：骨架 RIG-Reinforce（80 骨）、蒙皮、Idle/WingFlap 都在；无 shape key；18 个材质。
 - 回执原文在 reports/audit_scene.txt、reports/asm_scan.txt、reports/asm_gate.txt。
@@ -71,7 +73,8 @@
 1. build_body.py → 自定义躯干/手臂/腿
 2. build_head.py → 头/眼/眉/嘴
 3. build_hair.py → 发帽/刘海/长发/头羽
-4. build_outfit.py → 裙/袖/领/腰/外套/袜/靴/手套
+4. build_outfit.py → 裙/袖/领/腰/外套/旧袜靴（随后由 fix_legwear 替换）
+4b. fix_legwear.py → 高跟踝鞋 + 左短/右长不对称袜（v3 修正）
 5. build_hands.py → 手/指（v2 必须，否则手是空的）
 6. build_wings.py → 4 翼
 7. build_rig.py → 基础骨架 + 权重
@@ -90,11 +93,12 @@
 - 面部/手部做了简化；眼睛是贴面片，没有面部骨骼/表情 blend shape；鼻子/嘴在近距离仍显简单。
 - 翼是风格化羽扇（scallop+沟槽），不是逐根独立羽毛；远看成立，近看偏“扇子”。
 - 头发是分块发束；外套/裙是薄壳，没有布料/毛发物理。
+- 鞋是风格化高跟踝鞋（尖头、粗跟、踝环），不是精确鞋楦；袜的左短右长按参考图刻意做成不对称。
 - IK 已加，但 leg pole angle/手 IK 无 pole 是“保持 rest 干净”的折中；极值姿态仍需手工调。
 - 手指/裙骨权重是程序化近似；深蹲/抬臂极值下仍有少量鞋袜/裙/外套穿插（见 pose_sheet）。
-- 转台 MP4 与外部 glTF-Validator 未包含；用四视图/pose sheet 与 Blender glTF 重导入替代。
+- 已出 2s 转台 MP4；外部 glTF-Validator 未跑通（插件 runner 返回空 info），用 Blender glTF 重导入替代。
 - 参考图为个人同人练习使用；原始 4 张参考图未被修改；请勿商用或二次分发角色版权素材。
 
 ## 6. 角色判定依据
 
-网上资料（アニヲタWiki「リインフォース」）记载：TV 版保留头部羽饰、瞳孔无高光；剧场版去掉头部羽饰并给瞳孔加高光。因此按 TV 版处理：头侧羽饰、无高光红瞳、两对黑羽、黑裙金边、白包边、长外套金内衬、无指手套、过膝袜、黑靴。来源：https://w.atwiki.jp/aniwotawiki/pages/27595.html
+网上资料（アニヲタWiki「リインフォース」）记载：TV 版保留头部羽饰、瞳孔无高光；剧场版去掉头部羽饰并给瞳孔加高光。因此按 TV 版处理：头侧羽饰、无高光红瞳、两对黑羽、黑裙金边、白包边、长外套金内衬、无指手套、不对称袜（角色左短右长）、黑色高跟踝鞋（非靴）。来源：https://w.atwiki.jp/aniwotawiki/pages/27595.html

@@ -10,13 +10,15 @@
     "heads": 7.5,
     "head_mm": 224,
     "pose_rest": "A-pose",
+    "footwear": "black high-heeled ankle shoes with pointed toe and ankle cuff (not boots)",
+    "socks": "asymmetric: character's LEFT = short ankle sock; character's RIGHT = long thigh-high stocking",
     "wing_span_target_mm": 2400
   },
   "measured": {
     "overall_bbox_mm": [
       -1137.1,
-      -160.5,
-      -0.0,
+      -182.7,
+      -0.9,
       1137.5,
       335.2,
       2108.3
@@ -27,11 +29,11 @@
     "head_height_mm": 224.0,
     "wing_span_mm": 2274.7,
     "wing_top_mm": 2108.3,
-    "mesh_objects": 93,
-    "vertices": 21160,
+    "mesh_objects": 99,
+    "vertices": 21840,
     "max_influences": 3,
     "unweighted_vertices": 0,
-    "triangles_audit": 42036,
+    "triangles_audit": 43380,
     "wing_span_note": "measured tip-to-tip; design target 2400mm, actual 2274.7mm (-5.2%)"
   },
   "rig": {
@@ -133,31 +135,6 @@
       "CTRL-knee_pole_R",
       "CTRL-hand_IK_R",
       "CTRL-elbow_pole_R"
-    ],
-    "ik_controls": [
-      "CTRL-foot_IK_L",
-      "CTRL-knee_pole_L",
-      "CTRL-hand_IK_L",
-      "CTRL-elbow_pole_L",
-      "CTRL-foot_IK_R",
-      "CTRL-knee_pole_R",
-      "CTRL-hand_IK_R",
-      "CTRL-elbow_pole_R"
-    ],
-    "finger_bones": 20,
-    "skirt_bones": [
-      "skirt_F",
-      "skirt_B",
-      "skirt_L",
-      "skirt_R"
-    ],
-    "features": [
-      "FK humanoid",
-      "leg/arm IK controls",
-      "20 finger/thumb bones",
-      "4 skirt bones",
-      "3-bone wing chains",
-      "hair/coat chains"
     ],
     "export": {
       "glb": "export/Reinforce_Eins_TV.glb",

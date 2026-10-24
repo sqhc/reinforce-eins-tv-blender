@@ -3,7 +3,7 @@
 ## 1. 身份与版本
 - 角色：Reinforce Eins（リインフォース），《魔法少女リリカルなのはA's》TV 版。
 - 不是 Movie 2nd A's 版、不是 Reinforce II、不是 A's PORTABLE 游戏版。
-- TV 版特征：头侧羽饰、红瞳无高光、两对（4）黑羽、黑裙金边、白包边、长外套金内衬、无指手套、过膝袜、黑靴。
+- TV 版特征：头侧羽饰、红瞳无高光、两对（4）黑羽、黑裙金边、白包边、长外套金内衬、无指手套、不对称袜（角色左短右长）、黑色高跟踝鞋（非靴）。
 - 姿态：A-pose 静止；附 Idle/WingFlap 两段测试 Action。
 
 ## 2. 单位与坐标
@@ -21,7 +21,7 @@
 | 头顶/下巴/肩/胸/腰/胯/膝/踝 | 1680/1456/1344/1232/1008/840/448/45 | spec 关键高度 |
 | 发梢 | ≈ 950 | 后发到腰 |
 | 外套下摆 | 180 | 侧/后片 |
-| 袜口/靴口 | 640 / 360 | 过膝袜 + 中筒靴 |
+| 袜口/鞋口 | 右长筒袜 640 / 左短袜 300 / 鞋口 195 | 角色右腿长筒袜、左腿短袜；黑色高跟踝鞋 |
 | 翼展（tip-to-tip） | 2400 目标 | **实测 2274.7**（-5.2%，设计取向偏窄） |
 | 总包络（含翼） | — | x ±1137 mm，y -160.5..+335.2，z 0..2108.3 |
 
@@ -34,12 +34,12 @@
 | 白包边 | #E8E8EA |
 | 金饰 | #D8B24A |
 | 外套内衬 | #7A5C1C（深金，减少正面金色面积） |
-| 袜 / 靴 | #0E0F14 / #0B0C10 |
+| 袜 / 鞋 | #0E0F14 / #0B0C10 |
 | 翼 / 覆羽 | #14131B / #1B1A24 |
 | 虹膜 / 瞳孔 / 睫毛 | #B01F2B / #26080C / #17171A |
 | 眼白 / 嘴 | #F7F4F0 / #8A4348 |
 
-## 5. 部件分组（93 个 GEO mesh）
+## 5. 部件分组（99 个 GEO mesh）
 | 组 | 内容 |
 |---|---|
 | P-Body | GEO-Body、GEO-Arm_L/R、GEO-Leg_L/R |
@@ -48,15 +48,15 @@
 | P-Dress | Bodice、Collar、PipingCollar/Top、PipingSleeve_L/R、Sleeve_L/R、Skirt、Belt、Belt_Trim×2、Stud×6、TrimX×3、Shoulder_L/R |
 | P-Coat | Coat_Back_L/R、Coat_Side_L/R |
 | P-Arms | Glove_L/R、Glove_Trim_L/R、Hand_L/R、Finger_L/R_0..3、Thumb_L/R |
-| P-Legs | Stocking_L/R、Boot_L/R、Boot_Trim_L/R、Boot_Sole_L/R |
+| P-Legs | Stocking_Long_R、Sock_Short_L、Shoe_L/R、Shoe_Cuff_L/R、Shoe_CuffGold_L/R、Shoe_Heel_L/R、Shoe_Toe_L/R、Shoe_ToeGold_L/R |
 | P-Wings | 4 翼 ×（Fan + Covert） |
 
-合计 93 个 mesh，21,160 顶点，42,036 三角面。
+合计 99 个 mesh，21,840 顶点，43,380 三角面。
 
 ## 6. 接口与 allow（装配门）
 7 条接口（manifest reports/assembly.json）：Body↔Head、Head↔Hair、Body↔Dress、Body↔Arms、Body↔Legs、Dress↔Coat、Body↔Wings；tol 12 mm（翼根 40 mm）。
 - 8 个逻辑子装配组；组级 allow 用 max_depth_mm=120、max_volume_mm3=2e7，覆盖发根、翼根、眼片、手指、鞋袜、手/肩补片、外套/腰带等设计内交叠。
-- 分类见 reports/asm_scan.txt：clash=0、contained=0、float=0、unresolved=0；hidden_ok=196、contact=3、gap=273。
+- 分类见 reports/asm_scan.txt：clash=0、contained=0、float=0、unresolved=0；hidden_ok=200、contact=3、gap=276。
 
 ## 7. 骨架（RIG-Reinforce，80 骨）
 - 躯干：root、pelvis、spine_01、spine_02、chest、neck、head。
@@ -69,7 +69,7 @@
 - 手指：finger_L/R_0..3_01..02、thumb_L/R_01..02（20 骨）。
 - IK 控制（非变形）：CTRL-foot_IK_L/R、CTRL-knee_pole_L/R、CTRL-hand_IK_L/R、CTRL-elbow_pole_L/R（8 骨）。
 - IK：腿 shin chain=2，pole angle=-90°；手 forearm chain=2，无 pole（保持 rest 干净）。
-- 权重：程序化分区 + 关节 blend；0 未加权顶点；最大 3 影响/顶点；93 个 mesh 全部有 Armature 修改器。
+- 权重：程序化分区 + 关节 blend；0 未加权顶点；最大 3 影响/顶点；99 个 mesh 全部有 Armature 修改器。
 
 ## 8. 动画
 - Idle 1–72 帧 @24fps：脊柱/胸/头微动、双臂微摆、翼/后发/外套轻摆。
@@ -79,7 +79,7 @@
 ## 9. 交付与验收
 - Reinforce_Eins_TV.blend、export/*.glb/.fbx/.obj/.mtl、render/**、reports/**、spec.json。
 - audit_scene pass；asm_scan pass；asm_gate pass（export_allowed=true）。
-- 已知偏差：翼展比目标窄 5.2%；IK 极值需手调；手指/裙权重为程序化近似；面部为贴面片，无表情骨；无布料/毛发物理。
+- 已知偏差：翼展比目标窄 5.2%；IK 极值需手调；手指/裙/袜/鞋权重为程序化近似；面部为贴面片，无表情骨；无布料/毛发物理；鞋为风格化高跟踝鞋，非精确鞋楦。
 
 ## 10. 设计例外记录
 - catalog 没有“角色生成/绑定”op；按 skill §1.6 用 bpy/bmesh 建几何/骨架，验收仍全部走 audit/asm/gate。

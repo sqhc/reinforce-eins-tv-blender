@@ -5,3 +5,4 @@ work/patches/
 render/wip/
 export/test_*.glb
 *.blend1
+render/ref_crops/
