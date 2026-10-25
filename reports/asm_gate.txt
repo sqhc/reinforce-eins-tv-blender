@@ -303,7 +303,7 @@ PLAN asm_gate ok · 7144 chars · verdict=pass · export_allowed 仅 verdict=pas
  "manifest": {
   "assembly": "Reinforce_Eins_TV",
   "sealed": false,
-  "manifest_md5": "1c66c947c0ca6d00c90420aa69a9a5c1e6c8c3a92cb27289ba76c81fbb22bca0",
+  "manifest_md5": "07a527a7764af8eff2fd9ce6293b62342e81b0159894efc9b9a5f346719d4293",
   "counts": {
    "parts": 8,
    "interfaces": 7,
@@ -328,9 +328,9 @@ PLAN asm_gate ok · 7144 chars · verdict=pass · export_allowed 仅 verdict=pas
   "md_errors": {},
   "hidden_skipped": 0
  },
- "receipt_md5": "5959d6b9f5a791c1072476391f5a5a9edb42a3e44e375d58d27461e1343df246",
+ "receipt_md5": "7f47f153bd7bc15c5b7a5b112bd15bbf152988943aca433314e0ba106f28a5bf",
  "units": {
   "mm_per_unit": 1000
  },
- "ms": 24511
+ "ms": 24472
 }

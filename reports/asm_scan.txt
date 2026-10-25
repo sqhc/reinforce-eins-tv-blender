@@ -372,7 +372,7 @@ PLAN asm_scan ok · 8704 chars · verdict=pass
  "manifest": {
   "assembly": "Reinforce_Eins_TV",
   "sealed": false,
-  "manifest_md5": "1c66c947c0ca6d00c90420aa69a9a5c1e6c8c3a92cb27289ba76c81fbb22bca0",
+  "manifest_md5": "07a527a7764af8eff2fd9ce6293b62342e81b0159894efc9b9a5f346719d4293",
   "counts": {
    "parts": 8,
    "interfaces": 7,
@@ -405,5 +405,5 @@ PLAN asm_scan ok · 8704 chars · verdict=pass
  "units": {
   "mm_per_unit": 1000
  },
- "ms": 17387
+ "ms": 17332
 }
