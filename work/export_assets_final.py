@@ -7,6 +7,11 @@ bpy.context.scene.frame_set(1)
 rig.animation_data.action=bpy.data.actions['Idle']
 for tr in rig.animation_data.nla_tracks: tr.mute=(tr.name!='Idle')
 bpy.ops.wm.save_as_mainfile(filepath=base+'Reinforce_Eins_TV.blend')
+try: bpy.ops.object.mode_set(mode='OBJECT')
+except Exception: pass
+bpy.context.view_layer.objects.active=rig
+try: bpy.ops.object.mode_set(mode='OBJECT')
+except Exception: pass
 bpy.ops.object.select_all(action='DESELECT')
 for o in meshes: o.select_set(True)
 rig.select_set(True); bpy.context.view_layer.objects.active=rig
@@ -20,6 +25,8 @@ try:
     print('FBX_OK', os.path.getsize(base+'export/Reinforce_Eins_TV.fbx'))
 except Exception as e:
     print('FBX_ERR', repr(e))
+try: bpy.ops.object.mode_set(mode='OBJECT')
+except Exception: pass
 bpy.ops.object.select_all(action='DESELECT')
 for o in meshes: o.select_set(True)
 bpy.context.view_layer.objects.active=meshes[0]

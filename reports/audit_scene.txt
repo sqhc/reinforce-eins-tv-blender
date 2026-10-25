@@ -1,10 +1,10 @@
-PLAN audit_scene ok · 13356 chars · verdict=pass · worst 按 score=boundary+3*nonmanifold+2*degenerate+2*selfint+loose 排序；深挖用 audit_mesh(objects=[...])；本 op 默认**不跑自交检查** ⇒ verdict=degraded（clean=false）——要能当门用的完整结论
+PLAN audit_scene ok · 13358 chars · verdict=pass · worst 按 score=boundary+3*nonmanifold+2*degenerate+2*selfint+loose 排序；深挖用 audit_mesh(objects=[...])；本 op 默认**不跑自交检查** ⇒ verdict=degraded（clean=false）——要能当门用的完整结论
 {
  "ok": true,
- "count": 99,
+ "count": 165,
  "totals": {
-  "objects": 99,
-  "tris": 43380,
+  "objects": 165,
+  "tris": 51996,
   "boundary_edges": 0,
   "nonmanifold_edges": 0,
   "degenerate_faces": 0,
@@ -15,7 +15,7 @@ PLAN audit_scene ok · 13356 chars · verdict=pass · worst 按 score=boundary+3
   "empty_objects": 0,
   "loose_edges": 0,
   "normals_unknown": 0,
-  "normals_checked": 99,
+  "normals_checked": 165,
   "normals_multi_shell": 0,
   "analysis_incomplete": 0
  },
@@ -580,5 +580,5 @@ PLAN audit_scene ok · 13356 chars · verdict=pass · worst 按 score=boundary+3
    "tris": 384,
    "boundary_edges": 0,
    "nonmanifold_edges": 0,
-   "degenerate_fa
-…[已截断，共 13356 字符；结构化全量见后端 results/ 目录或用 headless(outJson=…) 落盘]
+   "degenerate
+…[已截断，共 13358 字符；结构化全量见后端 results/ 目录或用 headless(outJson=…) 落盘]

@@ -22,8 +22,9 @@ sheet([(base+'render/qc/front.png','FRONT'),(base+'render/qc/side.png','SIDE'),
       base+'render/final/contact_sheet.png')
 sheet([(base+'render/rig/pose_1_rest.png','REST A-POSE'),(base+'render/rig/pose_2_arms.png','ARMS UP (FK)'),
        (base+'render/rig/pose_3_crouch.png','CROUCH (FK)'),(base+'render/rig/pose_4_flap.png','WING FLAP'),
-       (base+'render/rig/pose_5_ik.png','IK ARMS + LEGS'),(base+'render/rig/pose_6_finger_skirt.png','FINGERS + SKIRT')],
-      base+'render/rig/pose_sheet.png', cell=(480,620), cols=3)
+       (base+'render/rig/pose_5_ik.png','IK ARMS + LEGS'),(base+'render/rig/pose_6_finger_skirt.png','FINGERS + SKIRT'),
+       (base+'render/rig/pose_7_ik_crouch.png','IK CROUCH (TUNED)'),(base+'render/rig/pose_8_ik_reach.png','IK REACH (TUNED)')],
+      base+'render/rig/pose_sheet.png', cell=(480,620), cols=4)
 
 ref=Image.open(base+'Model_test_ref.png') if os.path.exists(base+'Model_test_ref.png') else Image.open(r"/Users/shenqing/Desktop/Deepseek Harness/Model_test/ca43c8f8d8527eaec30a053605c2027d.jpg")
 ren=Image.open(base+'render/qc/front.png')

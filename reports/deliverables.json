@@ -6,126 +6,160 @@
   },
   "name": "Reinforce_Eins_TV",
   "bbox_mm": [
-    -1137.1,
+    -1124.5,
     -182.7,
     -0.9,
-    1137.5,
-    335.2,
-    2108.3
+    1124.5,
+    363.0,
+    2176.3
   ],
   "files": {
     "Reinforce_Eins_TV.blend": {
-      "bytes": 722076,
-      "md5": "f78c68e6087954a57f9b5faf27395c7d"
+      "bytes": 830542,
+      "md5": "da2d5f98220c115b1b1905cbbb2d30d9"
     },
     "export/Reinforce_Eins_TV.glb": {
-      "bytes": 1469152,
-      "md5": "1d4d2db4e85ceb81c82f1d40a59a99eb"
+      "bytes": 1754680,
+      "md5": "86bf7a584a0f4e86d68d18e6c236b19b"
     },
     "export/Reinforce_Eins_TV.fbx": {
-      "bytes": 9935932,
-      "md5": "7cc97aeec791e865526134bc48c841c1"
+      "bytes": 16669612,
+      "md5": "b9d9718ca3c36493edf7b6c2cdacc611"
     },
     "export/Reinforce_Eins_TV.obj": {
-      "bytes": 2937973,
-      "md5": "18425cf7909113396d3071b395b1a892"
+      "bytes": 3542741,
+      "md5": "15d8e7379c7c8a7a69b8c7887ae76578"
     },
     "export/Reinforce_Eins_TV.mtl": {
       "bytes": 3344,
       "md5": "8791ccfcf6a6e37315d9a12a55d0c6f3"
     },
     "render/qc/front.png": {
-      "bytes": 1649029,
-      "md5": "40bc406854fa75a15032ce47d67e07b8"
+      "bytes": 1706398,
+      "md5": "09c654afd40a5cb0663120387104eb21"
     },
     "render/qc/side.png": {
-      "bytes": 1585943,
-      "md5": "c225d53132be762a5147777ab7fe2a52"
+      "bytes": 1612234,
+      "md5": "7a3d7e2ebdd930bdb5682fd63c914e8a"
     },
     "render/qc/back.png": {
-      "bytes": 1616857,
-      "md5": "2d230c7d347afd15570c957852091051"
+      "bytes": 1614751,
+      "md5": "4a8309be884056138bb1df3b0ec6e27d"
     },
     "render/qc/three_quarter.png": {
-      "bytes": 1612652,
-      "md5": "fbc63b07731255966a7f60360a7005ef"
+      "bytes": 1656333,
+      "md5": "7eb1308afb02462c5f6918c12ec1404f"
     },
     "render/final/hero.png": {
-      "bytes": 2250121,
-      "md5": "106b906c68fb47d5658f04d8b298dfb2"
+      "bytes": 2316147,
+      "md5": "4643a917e649238141c19e1335cc0af7"
     },
     "render/final/portrait.png": {
-      "bytes": 1377166,
-      "md5": "85222a4e753a6080faa306a91f34be03"
+      "bytes": 1398434,
+      "md5": "c34aad44767377f08f9a90a915492de8"
     },
     "render/final/contact_sheet.png": {
-      "bytes": 883413,
-      "md5": "e368a0f31c9da7f173b87f1effd9654a"
+      "bytes": 903806,
+      "md5": "e787d12fa4fd8830d7986bb4a0dd5572"
     },
     "render/final/compare_ref.png": {
-      "bytes": 570900,
-      "md5": "09aac828abf988098b0293399892c128"
+      "bytes": 597287,
+      "md5": "8b9e6aab5db79ec319211cdb8531a04b"
     },
     "render/final/lower_body.png": {
-      "bytes": 1070051,
-      "md5": "2dbeafc4394365899b7a5d4ab5680342"
+      "bytes": 1090793,
+      "md5": "bbb089284cd14753c6bf411783405675"
+    },
+    "render/final/expression.png": {
+      "bytes": 1392624,
+      "md5": "34b4f76fa39631cd69d3364c59db100b"
     },
     "render/anim/turntable.mp4": {
-      "bytes": 385050,
-      "md5": "d2f8acc53e4001bbc56fff1eef5f514b"
+      "bytes": 419426,
+      "md5": "ffab6d542c8675542bc328eff5f8c1b1"
+    },
+    "render/anim/secondary.mp4": {
+      "bytes": 52745,
+      "md5": "a5d971be60595641678be656122060cc"
     },
     "render/rig/pose_sheet.png": {
-      "bytes": 932345,
-      "md5": "cd45ce30e2733615954c000577c50f7c"
+      "bytes": 1300538,
+      "md5": "046c11e2a34d304807cdeb4566d5d1cd"
+    },
+    "render/rig/pose_7_ik_crouch.png": {
+      "bytes": 735472,
+      "md5": "93cc843cf5bb20334a26bbf5c2205057"
+    },
+    "render/rig/pose_8_ik_reach.png": {
+      "bytes": 747504,
+      "md5": "2408ab052e7d739b8f21cf8135616e2e"
     },
     "reports/assembly.json": {
-      "bytes": 17487,
-      "md5": "85907cf8e43eef3d1741af090ed1748b"
+      "bytes": 19603,
+      "md5": "35fd9b3346cbd0c9b0541f42f3c8836c"
     },
     "reports/audit_scene.txt": {
       "bytes": 12391,
-      "md5": "eb4e2f59bbc43ad6d9512d6649674387"
+      "md5": "ac43a1c235f7d275b4712e2718011912"
     },
     "reports/asm_scan.txt": {
-      "bytes": 7516,
-      "md5": "64c873e2d2ee8b4857dfdf14b3a1526e"
+      "bytes": 9251,
+      "md5": "4f53fa01c9f502b68240325f25e9f89d"
     },
     "reports/asm_gate.txt": {
-      "bytes": 7810,
-      "md5": "36cd5fbdeaf8cc558f04da6e0d04b641"
+      "bytes": 7835,
+      "md5": "04f249dc7ade4d10de7004f0b261803d"
     },
     "spec.json": {
-      "bytes": 3715,
-      "md5": "9e8c0ae50be6de8466ea670c0ed94251"
+      "bytes": 4440,
+      "md5": "4e38ab4f6e9c585e98263f03290b3b19"
     },
     "spec.md": {
-      "bytes": 5026,
-      "md5": "f1ed9ea734d4de3805888559591caf0c"
+      "bytes": 5606,
+      "md5": "f7058cc170b7e6cea9fb42a33b9776a7"
     },
     "README.md": {
-      "bytes": 7607,
-      "md5": "5e550b81324583b585b34e72c68b9bf2"
+      "bytes": 9093,
+      "md5": "8828552c594bc7185fbdbb1db6dca75b"
     },
     "reports/qc_report.md": {
-      "bytes": 4569,
-      "md5": "f12a8e1dffffc0ee4d260e3068115983"
+      "bytes": 4882,
+      "md5": "a42bb622934aa5c7e7f570c9fb11b696"
     },
     "reports/rig_report.md": {
-      "bytes": 4907,
-      "md5": "ec89927629d1c132b91db30c237f6046"
+      "bytes": 5116,
+      "md5": "971d0a27258bc94946ed246080ad2970"
     },
     "reports/measures.json": {
-      "bytes": 470,
-      "md5": "0d8e05422ab55c655f4082d84b47e7b5"
+      "bytes": 524,
+      "md5": "8473f9295cf7aa43b10e059df27c231b"
     }
   },
   "rig": {
     "armature": "RIG-Reinforce",
-    "bones": 80,
+    "bones": 83,
     "actions": [
-      "Idle",
-      "WingFlap"
+      {
+        "name": "Idle",
+        "frames": "1-72",
+        "fps": 24
+      },
+      {
+        "name": "WingFlap",
+        "frames": "1-31",
+        "fps": 24
+      },
+      {
+        "name": "FaceDemo",
+        "frames": "1-48",
+        "fps": 24
+      },
+      {
+        "name": "SecondaryFlow",
+        "frames": "1-96",
+        "fps": 24
+      }
     ]
   },
-  "note": "GLB/FBX contain skin + Idle/WingFlap actions; OBJ is static rest-pose export."
+  "note": "GLB/FBX contain skin + Idle/WingFlap/FaceDemo/SecondaryFlow actions; OBJ is static rest-pose export."
 }
