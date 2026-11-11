@@ -183,7 +183,7 @@ for ob in meshes:
         assign_arm(ob, n[-1])
     elif n.startswith('GEO-Leg'):
         assign_leg(ob, n[-1], 1 if n[-1]=='L' else -1)
-    elif n.startswith(('GEO-Head','GEO-Eye','GEO-Brow','GEO-Mouth','GEO-Nose','GEO-Hair_Cap','GEO-Hair_Bang','GEO-Hair_Front','GEO-Hair_Feather')):
+    elif n.startswith(('GEO-Head','GEO-Eye','GEO-Iris','GEO-Lash','GEO-BlinkLid','GEO-Brow','GEO-Mouth','GEO-Nose','GEO-Hair_Cap','GEO-Hair_Bang','GEO-Hair_Front','GEO-Hair_Feather')):
         one(ob,'head')
     elif n.startswith('GEO-Hair_Back'):
         assign_z(ob, [(0.95,'hair_back_03'),(1.14,'hair_back_02'),(1.38,'hair_back_01'),(1.55,'head')])

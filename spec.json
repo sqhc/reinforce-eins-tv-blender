@@ -10,8 +10,16 @@
     "heads": 7.5,
     "head_mm": 224,
     "pose_rest": "A-pose",
-    "wings": "4 wings with 70 individual feather cards + 4 backing membranes",
-    "face": "jaw + brow_L/R expression bones; no eyelid/blendshape rig",
+    "face": "ellipsoid eyeballs + iris/pupil disks + 4 eyelid caps + 2 blink cards + upper lashes; jaw/brow expression bones",
+    "eye_shape_keys": [
+      "blink",
+      "squint",
+      "wide_open"
+    ],
+    "mouth_shape_keys": [
+      "smile",
+      "open"
+    ],
     "wing_span_target_mm": 2400
   },
   "measured": {
@@ -29,39 +37,29 @@
     "head_height_mm": 224.0,
     "wing_span_mm": 2249.0,
     "wing_top_mm": 2176.3,
-    "mesh_objects": 165,
-    "vertices": 26280,
+    "mesh_objects": 175,
+    "vertices": 33760,
     "max_influences": 3,
     "unweighted_vertices": 0,
-    "triangles_audit": 51996,
-    "wing_span_note": "measured tip-to-tip; design target 2400mm, actual 2249mm (-6.3%)",
-    "individual_feathers": 70,
-    "backing_membranes": 4
+    "triangles_audit": 66916,
+    "face_objects": {
+      "eyeballs": 2,
+      "iris_pupil_disks": 2,
+      "eyelid_caps": 4,
+      "blink_cards": 2,
+      "lashes": 2
+    },
+    "wing_span_note": "measured tip-to-tip; design target 2400mm, actual 2249mm (-6.3%)"
   },
   "rig": {
     "armature": "RIG-Reinforce",
-    "bones": 83,
+    "bones": 89,
     "actions": [
-      {
-        "name": "Idle",
-        "frames": "1-72",
-        "fps": 24
-      },
-      {
-        "name": "WingFlap",
-        "frames": "1-31",
-        "fps": 24
-      },
-      {
-        "name": "FaceDemo",
-        "frames": "1-48",
-        "fps": 24
-      },
-      {
-        "name": "SecondaryFlow",
-        "frames": "1-96",
-        "fps": 24
-      }
+      "Idle",
+      "WingFlap",
+      "FaceDemo",
+      "FaceDemoV5",
+      "SecondaryFlow"
     ],
     "frame_ranges": {
       "Idle": [
@@ -92,6 +90,12 @@
       "jaw",
       "brow_L",
       "brow_R",
+      "Pupil_L",
+      "Lid_Up_L",
+      "Lid_Dn_L",
+      "Pupil_R",
+      "Lid_Up_R",
+      "Lid_Dn_R",
       "clavicle_L",
       "upperarm_L",
       "forearm_L",
@@ -159,6 +163,17 @@
       "CTRL-hand_IK_R",
       "CTRL-elbow_pole_R"
     ],
+    "face_bones": [
+      "jaw",
+      "brow_L",
+      "brow_R",
+      "Pupil_L",
+      "Pupil_R",
+      "Lid_Up_L",
+      "Lid_Up_R",
+      "Lid_Dn_L",
+      "Lid_Dn_R"
+    ],
     "features": [
       "FK humanoid",
       "leg/arm IK controls",
@@ -167,13 +182,20 @@
       "3-bone wing chains",
       "hair/coat chains",
       "jaw + brow expression bones",
-      "spring-damper secondary motion (hair/coat/skirt)"
+      "2 gaze bones + 4 eyelid bones",
+      "3D eye/iris + blink cards",
+      "spring-damper secondary motion"
     ],
-    "face_bones": [
-      "jaw",
-      "brow_L",
-      "brow_R"
-    ],
+    "morph_targets": {
+      "objects": 7,
+      "keys": [
+        "blink",
+        "squint",
+        "wide_open",
+        "smile",
+        "open"
+      ]
+    },
     "export": {
       "glb": "export/Reinforce_Eins_TV.glb",
       "fbx": "export/Reinforce_Eins_TV.fbx",

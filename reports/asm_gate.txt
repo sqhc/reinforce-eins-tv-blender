@@ -13,8 +13,8 @@ PLAN asm_gate ok · 7144 chars · verdict=pass · export_allowed 仅 verdict=pas
    "receipt": {
     "mode": "audit_mesh",
     "totals": {
-     "objects": 165,
-     "tris": 51996,
+     "objects": 175,
+     "tris": 66916,
      "boundary_edges": 0,
      "nonmanifold_edges": 0,
      "degenerate_faces": 0,
@@ -25,7 +25,7 @@ PLAN asm_gate ok · 7144 chars · verdict=pass · export_allowed 仅 verdict=pas
      "empty_objects": 0,
      "loose_edges": 0,
      "normals_unknown": 0,
-     "normals_checked": 165,
+     "normals_checked": 175,
      "normals_multi_shell": 0,
      "analysis_incomplete": 0
     },
@@ -37,35 +37,35 @@ PLAN asm_gate ok · 7144 chars · verdict=pass · export_allowed 仅 verdict=pas
    "state": "pass",
    "inverted": [],
    "unknown": [],
-   "checked": 165,
-   "reason": "闭合件法线全部朝外（165 个已判）"
+   "checked": 175,
+   "reason": "闭合件法线全部朝外（175 个已判）"
   },
   {
    "id": "clash_all",
    "state": "pass",
-   "reason": "扫了 165 件 / 1829 对候选：clash=0 contained=0 hidden_ok=692 contact=5 gap=1132 float=0 unresolved=0 → pass",
+   "reason": "扫了 175 件 / 1884 对候选：clash=0 contained=0 hidden_ok=716 contact=5 gap=1163 float=0 unresolved=0 → pass",
    "receipt": {
     "ok": true,
     "verdict": "pass",
     "counts": {
      "clash": 0,
-     "hidden_ok": 692,
+     "hidden_ok": 716,
      "contact": 5,
-     "gap": 1132,
+     "gap": 1163,
      "float": 0,
      "contained": 0,
      "unresolved": 0,
-     "gap_far": 11701,
-     "candidates": 1715,
-     "near_pairs": 114,
-     "tested": 1829,
-     "pairs_total": 13530
+     "gap_far": 13341,
+     "candidates": 1754,
+     "near_pairs": 130,
+     "tested": 1884,
+     "pairs_total": 15225
     },
     "coverage": {
-     "objects": 165,
-     "aabb_pairs": 1715,
-     "near_pairs": 114,
-     "tested": 1829,
+     "objects": 175,
+     "aabb_pairs": 1754,
+     "near_pairs": 130,
+     "tested": 1884,
      "complete": true,
      "truncated": false,
      "budget_hit": false,
@@ -275,9 +275,9 @@ PLAN asm_gate ok · 7144 chars · verdict=pass · export_allowed 仅 verdict=pas
  "trend": {
   "clash": 0,
   "contained": 0,
-  "hidden_ok": 692,
+  "hidden_ok": 716,
   "contact": 5,
-  "gap": 1132,
+  "gap": 1163,
   "unresolved": 0,
   "float": 0,
   "max_depth_mm": 73.8983
@@ -303,7 +303,7 @@ PLAN asm_gate ok · 7144 chars · verdict=pass · export_allowed 仅 verdict=pas
  "manifest": {
   "assembly": "Reinforce_Eins_TV",
   "sealed": false,
-  "manifest_md5": "07a527a7764af8eff2fd9ce6293b62342e81b0159894efc9b9a5f346719d4293",
+  "manifest_md5": "c817ce2248f30a995e2e749bdeb6ee9a850e800c8963951a503c72df74d46086",
   "counts": {
    "parts": 8,
    "interfaces": 7,
@@ -324,13 +324,13 @@ PLAN asm_gate ok · 7144 chars · verdict=pass · export_allowed 仅 verdict=pas
   "本版不出穿透特写图（shots 恒 skipped），图只作证据、结论仍以数字为准"
  ],
  "trace": {
-  "objects": 165,
+  "objects": 175,
   "md_errors": {},
   "hidden_skipped": 0
  },
- "receipt_md5": "7f47f153bd7bc15c5b7a5b112bd15bbf152988943aca433314e0ba106f28a5bf",
+ "receipt_md5": "bbb924ead9f75afd20d36b73805656c655e625f52df3dd87b64d805678efc552",
  "units": {
   "mm_per_unit": 1000
  },
- "ms": 24472
+ "ms": 31525
 }

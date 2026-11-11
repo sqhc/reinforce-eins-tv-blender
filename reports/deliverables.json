@@ -15,72 +15,100 @@
   ],
   "files": {
     "Reinforce_Eins_TV.blend": {
-      "bytes": 830877,
-      "md5": "abc7a51be226702b84e14987f26414d3"
+      "bytes": 971309,
+      "md5": "b84b32177ea468e2f40b26e5be779b94"
     },
     "export/Reinforce_Eins_TV.glb": {
-      "bytes": 1754680,
-      "md5": "86bf7a584a0f4e86d68d18e6c236b19b"
+      "bytes": 2272664,
+      "md5": "3d0b1aa713075fd395e283bcc725bf03"
     },
     "export/Reinforce_Eins_TV.fbx": {
-      "bytes": 16669612,
-      "md5": "b9d9718ca3c36493edf7b6c2cdacc611"
+      "bytes": 19424156,
+      "md5": "935e72919b9ab867a60659e8e92b2548"
     },
     "export/Reinforce_Eins_TV.obj": {
-      "bytes": 3542741,
-      "md5": "15d8e7379c7c8a7a69b8c7887ae76578"
+      "bytes": 4539628,
+      "md5": "1a6f87b516d69a858a00e86c41422658"
     },
     "export/Reinforce_Eins_TV.mtl": {
       "bytes": 3344,
       "md5": "8791ccfcf6a6e37315d9a12a55d0c6f3"
     },
     "render/qc/front.png": {
-      "bytes": 1706398,
-      "md5": "09c654afd40a5cb0663120387104eb21"
+      "bytes": 1706310,
+      "md5": "adebea664e96fae1ddfa0a3149826499"
     },
     "render/qc/side.png": {
-      "bytes": 1612234,
-      "md5": "7a3d7e2ebdd930bdb5682fd63c914e8a"
+      "bytes": 1611906,
+      "md5": "a85b46043c72ee89e8e313c1d54d74e0"
     },
     "render/qc/back.png": {
-      "bytes": 1614751,
-      "md5": "4a8309be884056138bb1df3b0ec6e27d"
+      "bytes": 1614534,
+      "md5": "64aaaa86746dd952cfe3f0424998861f"
     },
     "render/qc/three_quarter.png": {
-      "bytes": 1656333,
-      "md5": "7eb1308afb02462c5f6918c12ec1404f"
+      "bytes": 1656847,
+      "md5": "abe645ff0a04aec4948512c17d4a9baa"
     },
     "render/final/hero.png": {
-      "bytes": 2316147,
-      "md5": "4643a917e649238141c19e1335cc0af7"
+      "bytes": 2316539,
+      "md5": "fd6f16426bbc3a14bdb486a8c8f33f97"
     },
     "render/final/portrait.png": {
-      "bytes": 1398434,
-      "md5": "c34aad44767377f08f9a90a915492de8"
+      "bytes": 1398913,
+      "md5": "3614eb62dacff778328808f8361adc32"
     },
     "render/final/contact_sheet.png": {
-      "bytes": 903806,
-      "md5": "e787d12fa4fd8830d7986bb4a0dd5572"
+      "bytes": 904007,
+      "md5": "c9b1d474a93b624f624e0d1bac4d299a"
     },
     "render/final/compare_ref.png": {
-      "bytes": 597287,
-      "md5": "8b9e6aab5db79ec319211cdb8531a04b"
+      "bytes": 597294,
+      "md5": "1212b3d2af997112799a919c4b72c8fe"
     },
     "render/final/lower_body.png": {
-      "bytes": 1090793,
-      "md5": "bbb089284cd14753c6bf411783405675"
+      "bytes": 1091128,
+      "md5": "4dc344473c665f7a28c87efc88090c05"
     },
     "render/final/expression.png": {
-      "bytes": 1392624,
-      "md5": "34b4f76fa39631cd69d3364c59db100b"
+      "bytes": 709278,
+      "md5": "b31bec36af49f1b1fb128006d3bf0600"
+    },
+    "render/final/expression_sheet_v5.png": {
+      "bytes": 1204423,
+      "md5": "2893a25d08eede92e0cdfef71c8ca26a"
     },
     "render/anim/turntable.mp4": {
-      "bytes": 419426,
-      "md5": "ffab6d542c8675542bc328eff5f8c1b1"
+      "bytes": 418334,
+      "md5": "f6c1f6a93e4ccdac4c2231b6c84bf96e"
     },
     "render/anim/secondary.mp4": {
-      "bytes": 52745,
-      "md5": "a5d971be60595641678be656122060cc"
+      "bytes": 53067,
+      "md5": "7995e2e62be814d2450c1565b3555836"
+    },
+    "render/face/v5_neutral.png": {
+      "bytes": 985827,
+      "md5": "a42602e45252b1b29e6bcb70dad90b64"
+    },
+    "render/face/v5_blink.png": {
+      "bytes": 980598,
+      "md5": "d422639c8edf8324b9dbcd864733ff14"
+    },
+    "render/face/v5_surprise.png": {
+      "bytes": 984387,
+      "md5": "dc357b91e0f6c4258a4634e4bd934d00"
+    },
+    "render/face/v5_squint.png": {
+      "bytes": 985751,
+      "md5": "19b40d0de533486918fed22983334f2c"
+    },
+    "render/face/v5_smile.png": {
+      "bytes": 984743,
+      "md5": "75c8d989bda303ed90764ac067412f51"
+    },
+    "render/face/v5_profile.png": {
+      "bytes": 947802,
+      "md5": "9963bf64aa83b83968bdb88ce14706b0"
     },
     "render/rig/pose_sheet.png": {
       "bytes": 1300538,
@@ -95,71 +123,64 @@
       "md5": "4f07d8b605bd239b40a535532252420e"
     },
     "reports/assembly.json": {
-      "bytes": 19603,
-      "md5": "2a732d3faee12bbb92ab47b34be1aaef"
+      "bytes": 19865,
+      "md5": "310100776b4a8d9394a057a03dff2c5f"
     },
     "reports/audit_scene.txt": {
       "bytes": 12391,
-      "md5": "ac43a1c235f7d275b4712e2718011912"
+      "md5": "a7e6ef79f49718d351af497dbeabceb1"
     },
     "reports/asm_scan.txt": {
-      "bytes": 9251,
-      "md5": "76b7e9b1002975a43eb347618b16209c"
+      "bytes": 9453,
+      "md5": "d642a97ee99b5edb871b47b1cd10c5a1"
     },
     "reports/asm_gate.txt": {
       "bytes": 7835,
-      "md5": "88b2b0550d1c28577ebfb5e6e05a960e"
+      "md5": "f31cac67506d03b48f7425bbfcec6b2e"
     },
     "spec.json": {
-      "bytes": 4440,
-      "md5": "4e38ab4f6e9c585e98263f03290b3b19"
+      "bytes": 4808,
+      "md5": "b1ff230e2cd6901e2fe0c20b63051cde"
     },
     "spec.md": {
-      "bytes": 5606,
-      "md5": "f7058cc170b7e6cea9fb42a33b9776a7"
+      "bytes": 4228,
+      "md5": "1f00e7c37642f2f20bfe48ea759f35c0"
     },
     "README.md": {
-      "bytes": 9093,
-      "md5": "8828552c594bc7185fbdbb1db6dca75b"
+      "bytes": 7145,
+      "md5": "4f7a4bdcafa5c89f27596b0057750820"
     },
     "reports/qc_report.md": {
-      "bytes": 4882,
-      "md5": "a42bb622934aa5c7e7f570c9fb11b696"
+      "bytes": 3707,
+      "md5": "76b574b0f2f4a9ec519609cec9c108be"
     },
     "reports/rig_report.md": {
-      "bytes": 5116,
-      "md5": "971d0a27258bc94946ed246080ad2970"
+      "bytes": 2866,
+      "md5": "202f7b336a3ed3b8f214d9ccd800f9d8"
+    },
+    "reports/face_v5_report.md": {
+      "bytes": 2381,
+      "md5": "68381d25813d3e2b29916bdb61ad9c28"
+    },
+    "design_preview_eye_v5.md": {
+      "bytes": 1167,
+      "md5": "d99485d6e5e76ba536c7e5e187aaa094"
     },
     "reports/measures.json": {
-      "bytes": 524,
-      "md5": "8473f9295cf7aa43b10e059df27c231b"
+      "bytes": 600,
+      "md5": "e2f10ee45b304c8deb8627e1b81f5d7c"
     }
   },
   "rig": {
     "armature": "RIG-Reinforce",
-    "bones": 83,
+    "bones": 89,
     "actions": [
-      {
-        "name": "Idle",
-        "frames": "1-72",
-        "fps": 24
-      },
-      {
-        "name": "WingFlap",
-        "frames": "1-31",
-        "fps": 24
-      },
-      {
-        "name": "FaceDemo",
-        "frames": "1-48",
-        "fps": 24
-      },
-      {
-        "name": "SecondaryFlow",
-        "frames": "1-96",
-        "fps": 24
-      }
+      "Idle",
+      "WingFlap",
+      "FaceDemo",
+      "FaceDemoV5",
+      "SecondaryFlow"
     ]
   },
-  "note": "GLB/FBX contain skin + Idle/WingFlap/FaceDemo/SecondaryFlow actions; OBJ is static rest-pose export."
+  "note": "GLB/FBX contain skin + Idle/WingFlap/FaceDemo/FaceDemoV5/SecondaryFlow actions and 7 morph objects; OBJ is static rest-pose export."
 }

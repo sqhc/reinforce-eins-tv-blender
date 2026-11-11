@@ -8,7 +8,7 @@ groups={'P-Body':[],'P-Head':[],'P-Hair':[],'P-Dress':[],'P-Coat':[],'P-Arms':[]
 def put(pid,n): groups[pid].append(n)
 for n in meshes:
     if n in ('GEO-Body','GEO-Arm_L','GEO-Arm_R','GEO-Leg_L','GEO-Leg_R'): put('P-Body',n)
-    elif n.startswith(('GEO-Head','GEO-Eye','GEO-Brow','GEO-Mouth','GEO-Nose')): put('P-Head',n)
+    elif n.startswith(('GEO-Head','GEO-Eye','GEO-Iris','GEO-Lash','GEO-BlinkLid','GEO-Brow','GEO-Mouth','GEO-Nose')): put('P-Head',n)
     elif n.startswith('GEO-Hair'): put('P-Hair',n)
     elif n.startswith(('GEO-Dress','GEO-Belt')): put('P-Dress',n)
     elif n.startswith('GEO-Coat'): put('P-Coat',n)

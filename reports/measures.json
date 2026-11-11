@@ -13,12 +13,17 @@
   "head_height_mm": 224.0,
   "wing_span_mm": 2249.0,
   "wing_top_mm": 2176.3,
-  "mesh_objects": 165,
-  "vertices": 26280,
+  "mesh_objects": 175,
+  "vertices": 33760,
   "max_influences": 3,
   "unweighted_vertices": 0,
-  "triangles_audit": 51996,
-  "wing_span_note": "measured tip-to-tip; design target 2400mm, actual 2249mm (-6.3%)",
-  "individual_feathers": 70,
-  "backing_membranes": 4
+  "triangles_audit": 66916,
+  "face_objects": {
+    "eyeballs": 2,
+    "iris_pupil_disks": 2,
+    "eyelid_caps": 4,
+    "blink_cards": 2,
+    "lashes": 2
+  },
+  "wing_span_note": "measured tip-to-tip; design target 2400mm, actual 2249mm (-6.3%)"
 }

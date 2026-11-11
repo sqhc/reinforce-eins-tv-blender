@@ -3,6 +3,7 @@ import json, hashlib, os, subprocess
 base=r"/Users/shenqing/Desktop/Deepseek Harness/Model_test/"
 # recompose sheets
 subprocess.run(["python3", base+"work/compose.py"], check=False)
+subprocess.run(["python3", base+"work/compose_face_v5.py"], check=False)
 # patch spec
 sp=json.load(open(base+"spec.json",encoding="utf-8"))
 sp["measured"]["body_height_mm"]=1680.0
@@ -19,11 +20,13 @@ files=["Reinforce_Eins_TV.blend","export/Reinforce_Eins_TV.glb","export/Reinforc
        "export/Reinforce_Eins_TV.obj","export/Reinforce_Eins_TV.mtl",
        "render/qc/front.png","render/qc/side.png","render/qc/back.png","render/qc/three_quarter.png",
        "render/final/hero.png","render/final/portrait.png","render/final/contact_sheet.png",
-       "render/final/compare_ref.png","render/final/lower_body.png","render/final/expression.png",
-       "render/anim/turntable.mp4","render/anim/secondary.mp4","render/rig/pose_sheet.png",
+       "render/final/compare_ref.png","render/final/lower_body.png","render/final/expression.png","render/final/expression_sheet_v5.png",
+       "render/anim/turntable.mp4","render/anim/secondary.mp4",
+       "render/face/v5_neutral.png","render/face/v5_blink.png","render/face/v5_surprise.png","render/face/v5_squint.png","render/face/v5_smile.png","render/face/v5_profile.png",
+       "render/rig/pose_sheet.png",
        "render/rig/pose_7_ik_crouch.png","render/rig/pose_8_ik_reach.png",
        "reports/assembly.json","reports/audit_scene.txt","reports/asm_scan.txt","reports/asm_gate.txt",
-       "spec.json","spec.md","README.md","reports/qc_report.md","reports/rig_report.md","reports/measures.json"]
+       "spec.json","spec.md","README.md","reports/qc_report.md","reports/rig_report.md","reports/face_v5_report.md","design_preview_eye_v5.md","reports/measures.json"]
 out={}
 for f in files:
     p=base+f
@@ -32,7 +35,7 @@ for f in files:
 man={"units":"mm","coordinate":{"up":"Z","forward":"-Y"},"name":"Reinforce_Eins_TV",
      "bbox_mm":sp["measured"]["overall_bbox_mm"],"files":out,
      "rig":{"armature":"RIG-Reinforce","bones":sp["rig"]["bones"],"actions":sp["rig"]["actions"]},
-     "note":"GLB/FBX contain skin + Idle/WingFlap/FaceDemo/SecondaryFlow actions; OBJ is static rest-pose export."}
+     "note":"GLB/FBX contain skin + Idle/WingFlap/FaceDemo/FaceDemoV5/SecondaryFlow actions and 7 morph objects; OBJ is static rest-pose export."}
 json.dump(man,open(base+"export/manifest.json","w",encoding="utf-8"),ensure_ascii=False,indent=2)
 json.dump(man,open(base+"reports/deliverables.json","w",encoding="utf-8"),ensure_ascii=False,indent=2)
 print(json.dumps({k:v["md5"] for k,v in out.items()},indent=1))

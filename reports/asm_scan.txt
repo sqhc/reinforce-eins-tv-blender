@@ -1,10 +1,10 @@
-PLAN asm_scan ok · 8704 chars · verdict=pass
+PLAN asm_scan ok · 8906 chars · verdict=pass
 {
  "ok": true,
  "verdict": "pass",
  "analyzed": true,
  "readonly": true,
- "objects": 165,
+ "objects": 175,
  "object_names": [
   "GEO-Body",
   "GEO-Arm_L",
@@ -12,9 +12,7 @@ PLAN asm_scan ok · 8704 chars · verdict=pass
   "GEO-Leg_L",
   "GEO-Leg_R",
   "GEO-Head",
-  "GEO-Eye_L",
   "GEO-Brow_L",
-  "GEO-Eye_R",
   "GEO-Brow_R",
   "GEO-Mouth",
   "GEO-Hair_Cap",
@@ -40,6 +38,18 @@ PLAN asm_scan ok · 8704 chars · verdict=pass
   "GEO-Hair_Feather_0",
   "GEO-Hair_Feather_1",
   "GEO-Hair_Feather_2",
+  "GEO-Eyeball_L",
+  "GEO-Iris_L",
+  "GEO-BlinkLid_L",
+  "GEO-Eyelid_Up_L",
+  "GEO-Eyelid_Dn_L",
+  "GEO-Lash_Up_L",
+  "GEO-Eyeball_R",
+  "GEO-Iris_R",
+  "GEO-BlinkLid_R",
+  "GEO-Eyelid_Up_R",
+  "GEO-Eyelid_Dn_R",
+  "GEO-Lash_Up_R",
   "GEO-Dress_Bodice",
   "GEO-Dress_PipingCollar",
   "GEO-Dress_Sleeve_L",
@@ -174,30 +184,30 @@ PLAN asm_scan ok · 8704 chars · verdict=pass
  ],
  "counts": {
   "clash": 0,
-  "hidden_ok": 692,
+  "hidden_ok": 716,
   "contact": 5,
-  "gap": 1132,
+  "gap": 1163,
   "float": 0,
   "contained": 0,
   "unresolved": 0,
-  "gap_far": 11701,
-  "candidates": 1715,
-  "near_pairs": 114,
-  "tested": 1829,
-  "pairs_total": 13530
+  "gap_far": 13341,
+  "candidates": 1754,
+  "near_pairs": 130,
+  "tested": 1884,
+  "pairs_total": 15225
  },
  "coverage": {
-  "objects": 165,
-  "aabb_pairs": 1715,
-  "near_pairs": 114,
-  "tested": 1829,
+  "objects": 175,
+  "aabb_pairs": 1754,
+  "near_pairs": 130,
+  "tested": 1884,
   "complete": true,
   "truncated": false,
   "budget_hit": false,
   "unresolved_objects": [],
   "md_errors": {}
  },
- "verdict_line": "扫了 165 件 / 1829 对候选：clash=0 contained=0 hidden_ok=692 contact=5 gap=1132 float=0 unresolved=0 → pass",
+ "verdict_line": "扫了 175 件 / 1884 对候选：clash=0 contained=0 hidden_ok=716 contact=5 gap=1163 float=0 unresolved=0 → pass",
  "thresholds": {
   "depth_eps_mm": 0.2,
   "contact_eps_mm": 0.3,
@@ -372,7 +382,7 @@ PLAN asm_scan ok · 8704 chars · verdict=pass
  "manifest": {
   "assembly": "Reinforce_Eins_TV",
   "sealed": false,
-  "manifest_md5": "07a527a7764af8eff2fd9ce6293b62342e81b0159894efc9b9a5f346719d4293",
+  "manifest_md5": "c817ce2248f30a995e2e749bdeb6ee9a850e800c8963951a503c72df74d46086",
   "counts": {
    "parts": 8,
    "interfaces": 7,
@@ -405,5 +415,5 @@ PLAN asm_scan ok · 8704 chars · verdict=pass
  "units": {
   "mm_per_unit": 1000
  },
- "ms": 17332
+ "ms": 20098
 }

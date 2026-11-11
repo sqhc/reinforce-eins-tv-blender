@@ -1,22 +1,20 @@
-# QC / 验收报告 · Reinforce Eins（TV版）v4
+# QC / 验收报告 · Reinforce Eins（TV版）v5
 
-日期：2026-10-24 · Blender 5.2.2 · dsh-blender-plugin 2.6.1
+日期：2026-11-11 · Blender 5.2.2 · dsh-blender-plugin 3.0.6
 
 ## 1. 结论
-- audit_scene：**pass**（165 个 mesh）
-- asm_scan：**pass**
+- audit_scene：**pass**（175 个 mesh，0 缺陷）
+- asm_scan：**pass**（175 件 / 1884 候选）
 - asm_gate：**pass**，export_allowed=true
-- GLB 重导入：83 骨、蒙皮、4 段 Action 均在
-- 逐根羽毛：70 根羽片 + 4 片底膜
-- 表情骨：jaw + brow_L/R（FaceDemo 1–48）
-- 二次物理：SecondaryFlow 1–96（弹簧-阻尼烘焙）
+- GLB 重导入：175 GEO mesh、89 骨、5 Action、7 个 morph 对象
+- 面部：2 眼球 + 2 虹膜盘 + 4 眼睑 + 2 眨眼盖 + 2 睫毛线；6 根新骨；blink/squint/wide_open/smile/open
 
-## 2. 网格体检（audit_scene，165 个 mesh）
+## 2. 网格体检（audit_scene，175 个 mesh）
 | 指标 | 数值 |
 |---|---|
-| objects | 165 |
-| triangles | 51,996 |
-| vertices | 26,280 |
+| objects | 175 |
+| triangles | 66,916 |
+| vertices | 33,760 |
 | boundary_edges | 0 |
 | nonmanifold_edges | 0 |
 | degenerate_faces | 0 |
@@ -29,20 +27,20 @@
 
 回执：reports/audit_scene.txt
 
-v4 羽毛几何先做薄片 solidify 有 841 个自交；凸包版本有 234 个自交/351 个退化面；最终改为封闭锥形羽片（12 环 × 12 段 + 翻转法线），165 件 0 缺陷。羽片互叠属于 P-Wings 组内 allow，不算单件自交。
+v5 眼球/虹膜/眨眼盖用封闭实体，避免 v4 之前的 solidify 自交：虹膜盘为前后双面 + 外圈；眨眼盖为前后薄盘；眼睑片单独 solidify。当前 175 件 0 自交。
 
 ## 3. 装配扫描（asm_scan，manifest=reports/assembly.json）
 | 指标 | 数值 |
 |---|---|
-| objects | 165 |
-| 候选对 / 测试对 | 1835 / 1835 |
+| objects | 175 |
+| 候选对 / 测试对 | 1884 / 1884 |
 | clash | **0** |
 | contained | **0** |
 | float | **0** |
 | unresolved | **0** |
-| contact | 3 |
-| gap | 1121 |
-| hidden_ok（组级 allow） | 711 |
+| contact | 5 |
+| gap | 1163 |
+| hidden_ok（组级 allow） | 716 |
 | verdict | **pass** |
 
 回执：reports/asm_scan.txt
@@ -50,50 +48,39 @@ v4 羽毛几何先做薄片 solidify 有 841 个自交；凸包版本有 234 个
 ## 4. 装配门（asm_gate）
 | 门 | 状态 | 说明 |
 |---|---|---|
-| mesh_health | pass | 165 件，0 缺陷 |
-| normals | pass | 165 个闭合件法线朝外 |
+| mesh_health | pass | 175 件，0 缺陷 |
+| normals | pass | 175 个闭合件法线朝外 |
 | clash_all | pass | clash=0/contained=0/float=0/unresolved=0 |
-| floaters | pass | 8 个 part 全部可达，0 浮空 |
+| floaters | pass | 8 个 part 全部可达 |
 | interfaces | pass | 7 条接口全部 contact |
-| measure | pass | 7 个接口期望均在 12 mm 公差内 |
+| measure | pass | 7 个接口期望在 12 mm 公差内 |
 | **总 verdict** | **pass** | **export_allowed=true** |
 
 回执：reports/asm_gate.txt；清单：reports/assembly.json。
 
-### 关于 allow 的口径
-- 8 个逻辑子装配组（Body/Head/Hair/Dress/Coat/Arms/Legs/Wings），组级 allow 上限 120 mm / 2e7 mm³。
-- 覆盖角色模型固有的设计内交叠（发根、翼根、70 根羽片互叠、底膜、眼片、手指、鞋袜、手/肩补片、外套/腰带）。
-- 这证明“没有未登记的 clash/contained/float”，**不等于**逐对三角面都做过工艺/强度复核；明细在 asm_scan.txt。
+### allow 口径
+- 8 个逻辑组；组级 allow max_depth 120 mm / max_volume 2e7。
+- 新增眼睑/眼球/虹膜/眨眼盖/睫毛的互叠登记在 P-Head 组内；证明没有未登记 clash/float，不是逐对工艺证书。
 
 ## 5. 导出复验
-- GLB：165 个 GEO mesh、83 骨、1 skin、4 段 animation（Idle/WingFlap/FaceDemo/SecondaryFlow）；重导入后 83 骨与 4 段 Action 均在；18 个材质；无 shape key。
-- 角色 bbox：x ±1124.5 mm，y -182.7..+363.0，z 0..2176.3（含翼）。
-- 重导入时 Blender glTF importer 会额外生成一个用于骨骼显示的 Icosphere helper；它不在 GLB 的 165 个 GEO mesh 里。
-- FBX 16 MB，OBJ 3.4 MB + MTL 3.3 KB；文件 md5 见 export/manifest.json。
-- glTF-Validator：插件 runner 返回 ok=false、info=null（无错误信息），外部 Khronos validator 未跑通；用 Blender 5.2 glTF 重导入 + 骨架/动作/材质检查替代。
+- GLB：175 GEO mesh、89 骨、1 skin、5 段 animation（FaceDemo/FaceDemoV5/Idle/SecondaryFlow/WingFlap）、7 个 morph 对象；重导入后 89 骨、5 Action、7 morph 均在；18 材质。
+- 角色 bbox：x ±1124.5 mm，y -182.7..+363.0，z 0..2176.3。
+- 重导入时 glTF importer 会额外生成骨骼显示 Icosphere helper；不在 175 GEO mesh 内。
+- FBX 19 MB，OBJ 4.3 MB + MTL 3.3 KB；md5 见 export/manifest.json。
+- glTF-Validator：插件 runner 返回 ok=false、info=null，外部 validator 未跑通；用 Blender 重导入替代。
 
-## 6. 视觉 QC
-- 四视图：render/qc/front|side|back|three_quarter.png；拼图：render/final/contact_sheet.png。
-- 主视觉：render/final/hero.png；半身：render/final/portrait.png；下半身：render/final/lower_body.png。
-- 表情测试：render/final/expression.png（FaceDemo 第 12 帧，jaw 张开 + 眉毛抬起）。
-- 绑定测试 8 格：render/rig/pose_sheet.png（rest / FK 举臂 / FK 下蹲 / 拍翼 / IK / 手指+裙骨 / IK 深蹲 / IK 过顶）。
-- 转台：render/anim/turntable.mp4（48 帧 / 2s / 800×1200 / H.264）。
-- 二次物理：render/anim/secondary.mp4（48 帧 / 2s / 720×900，SecondaryFlow）。
-- 可识别特征：银发、红瞳、4 黑翼（逐根羽片）、黑裙金 X、金腰带、白包边、长外套金内衬、无指手套、不对称袜（左短右长）、高跟踝鞋（非靴）、头侧羽饰。
+## 6. 视觉/面部 QC
+- 6 格面部：render/final/expression_sheet_v5.png（neutral / blink / surprise / squint / smile / 3/4 profile）。
+- 单张：render/face/v5_*.png；中性主图：render/final/expression.png。
+- 四视图/hero/portrait 已用 v5 眼睛重渲；转台/二次物理 MP4 也已重渲。
+- 绑定 8 格：render/rig/pose_sheet.png。
 
 ### 视觉限制
-- 羽片是程序化实体叶片，有独立轮廓/层叠，但不是写实羽枝/羽小枝；整体仍扇形排列。
-- 面部只有 jaw/brow 三根骨，没有眼睑/眨眼、口型、面部 blend shape；眼睛仍是贴面片。
-- 二次物理是弹簧-阻尼骨骼动力学，不做碰撞/自碰撞；深蹲时裙/腿穿插仍靠手调姿态规避。
-- FK 下蹲/IK 下蹲的脚未强制贴地（pose sheet 无地面），属于测试姿态，不是最终动画。
-- 极端姿态仍有少量裙/外套/袜穿插；正常 Idle/拍翼范围内不明显。
-- 背面头发在高轮廓光下偏亮、偏整块。
+- 3D 眼从侧面有眼球体积，不是原画纯平面；风格化取舍。
+- blink 是隐藏眨眼盖 morph，不是连续眼睑皮肤；4 眼睑骨有权重但示例动作有限。
+- squint/wide_open 为眼睑片整体位移；嘴角只有 simple smile/open morph，无口腔内部。
+- 极端 IK 姿态仍有少量裙/鞋/袜穿插；二次物理无碰撞。
+- 背面头发高光偏整块。
 
 ## 7. 复现
-见 README.md §4 与 work/；数字对应：
-- spec.json / reports/measures.json
-- reports/assembly.json
-- reports/audit_scene.txt
-- reports/asm_scan.txt
-- reports/asm_gate.txt
-- export/manifest.json / reports/deliverables.json
+见 README.md §4 与 work/；数字对应 spec.json、reports/measures.json、reports/assembly.json、audit/scan/gate 回执、export/manifest.json。

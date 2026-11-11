@@ -1,91 +1,71 @@
-# 绑定报告 · RIG-Reinforce（v4）
+# 绑定报告 · RIG-Reinforce（v5）
 
 ## 1. 骨架
 - 名称：RIG-Reinforce
-- 骨数：**83**
+- 骨数：**89**（v4 的 83 + 6 表情/视线骨）
 - rest pose：A-pose
-- 165 个 mesh 全部有 Armature 修改器，父级为 RIG-Reinforce。
+- 175 个 mesh 全部有 Armature 修改器。
 
-### 层级（概要）
-    root
-    └─ pelvis
-       ├─ spine_01 → spine_02 → chest
-       │              ├─ neck → head
-       │              │         ├─ jaw
-       │              │         ├─ brow_L / brow_R
-       │              │         ├─ hair_back_01 → 02 → 03
-       │              │         └─ hair_side_L/R_01 → 02
-       │              ├─ clavicle_L → upperarm_L → forearm_L → hand_L
-       │              ├─ clavicle_R → upperarm_R → forearm_R → hand_R
-       │              │         └─ finger_L/R_0..3_01 → 02；thumb_L/R_01 → 02
-       │              ├─ wing_up_L/R_01 → 02 → 03
-       │              └─ wing_low_L/R_01 → 02 → 03
-       ├─ thigh_L → shin_L → foot_L
-       ├─ thigh_R → shin_R → foot_R
-       ├─ coat_back_L/R_01 → 02、coat_side_L/R_01 → 02
-       └─ skirt_F/B/L/R
+### 新增骨
+| 骨 | 父级 | 用途 | 权重 |
+|---|---|---|---|
+| Pupil_L / Pupil_R | head | 视线（眼球/虹膜整体旋转） | Eyeball_L/R + Iris_L/R 100% |
+| Lid_Up_L / Lid_Up_R | head | 上眼睑 | Eyelid_Up_L/R 100% |
+| Lid_Dn_L / Lid_Dn_R | head | 下眼睑 | Eyelid_Dn_L/R 100% |
 
-    控制骨（非变形，父级 root）：
-    CTRL-foot_IK_L/R、CTRL-knee_pole_L/R、CTRL-hand_IK_L/R、CTRL-elbow_pole_L/R
+原有 jaw、brow_L/R、IK 控制、手指/裙/翼/发/外套骨保留。
 
-## 2. IK
-- 腿：shin_L/R 上 IK 约束，chain_count=2，target=CTRL-foot_IK_*，pole=CTRL-knee_pole_*，pole_angle=-90°。rest 校验约 1 mm。
-- 手：forearm_L/R 上 IK 约束，chain_count=2，target=CTRL-hand_IK_*，不挂 pole（避免 rest 偏移）。
-- 控制骨 use_deform=False；GLB/FBX **不会导出 IK 约束**，只导出骨架与 Action。要交付 IK 动画，先在 Blender 烘焙到 deform 骨。
-- v4 手调了 8 格姿态：IK 四肢、IK 深蹲、IK 过顶；深蹲时用 lower wing 后扫 + 小幅 skirt 旋转避开腿部。
+## 2. 面部系统与权重
+| 对象 | 内容 | 权重 |
+|---|---|---|
+| GEO-Eyeball_L/R | 椭球眼球，白 sclera | Pupil_L/R |
+| GEO-Iris_L/R | 贴合眼球的虹膜/瞳孔薄盘 | Pupil_L/R |
+| GEO-Eyelid_Up/Dn_L/R | 4 片肤色眼睑，上眼睑带黑睫毛边 | Lid_Up/Dn_L/R |
+| GEO-BlinkLid_L/R | 隐藏式眨眼盖（blink 形变到眼前） | Lid_Up_L/R |
+| GEO-Lash_Up_L/R | 上睫毛线 | Lid_Up_L/R |
+| GEO-Mouth | 嘴，smile/open 形态键 | jaw + head |
 
 ## 3. 蒙皮
 | 指标 | 数值 |
 |---|---|
-| mesh 对象 | 165 |
-| 顶点 | 26,280 |
+| mesh 对象 | 175 |
+| 顶点 | 33,760 |
 | 未加权顶点 | **0** |
 | 每顶点最大影响 | **3** |
-| 躯干/衣服 | 按高度在 pelvis/spine/chest/neck 之间线性混合 |
-| 手臂/腿 | 距离衰减混合 upperarm/forearm/hand、thigh/shin/foot |
-| 袖 | 100% upperarm；肩补片填缝 |
-| 手套 | forearm + 腕部 hand 混合 |
-| 手掌 | 100% hand；手指/拇指按 2 节骨沿指长混合 |
-| 长筒袜（角色右） | shin/thigh 按高度混合；鞋内一段归 foot |
-| 短袜（角色左） | foot/shin 分区（短袜在鞋口上方） |
-| 鞋 | 鞋体/鞋跟/鞋头/金饰 100% foot；踝环 100% foot |
-| 头发 | head + hair_back / hair_side 按高度混合 |
-| 外套 | coat_back/side 两节 + pelvis 顶部 |
-| 裙 | 顶部 pelvis + 下摆按角度分到 skirt_F/B/L/R |
-| 翼/羽片 | 70 根羽片 + 4 片底膜，按距离 wing_up/wing_low 三节骨加权 |
-| 面部 | head 主体；jaw 占下前脸/嘴；brow_L/R 占眉 |
+| 面部 | 眼球/虹膜 100% Pupil；眼睑 100% Lid；眨眼盖 100% Lid_Up |
+| 躯干/衣服/腿/翼/羽片 | 同 v4 程序化分区 |
 
-## 4. 动画与二次物理
-| Action | 帧 | fps | 内容 |
-|---|---|---|---|
-| Idle | 1–72 | 24 | 呼吸、头微转、双臂微摆、翼/后发/外套轻摆 |
-| WingFlap | 1–31 | 24 | 翼根 ±28°、羽片跟随、头/发/外套轻摆 |
-| FaceDemo | 1–48 | 24 | jaw 开合 + 眉毛抬/压 |
-| SecondaryFlow | 1–96 | 24 | 19 根头发/外套/裙的弹簧-阻尼数值积分 |
+## 4. 动画与形态键
+| Action | 帧 | 内容 |
+|---|---|---|
+| Idle | 1–72 | 呼吸/翼/发/外套 |
+| WingFlap | 1–31 | 拍翼 |
+| FaceDemo | 1–48 | v4 jaw/brow |
+| FaceDemoV5 | 1–42 | jaw/brow/Pupil/Lid 示例 |
+| SecondaryFlow | 1–96 | 弹簧-阻尼二次物理 |
 
-- 四段 Action 都存 fake user，并各建同名 NLA track；默认 Idle。
-- SecondaryFlow 是物理二次动力学（弹簧-阻尼），不是带碰撞的布料/毛发解算；烘焙成骨骼关键帧，GLB 可播放。
-- 第 1 帧接近 rest A-pose。
+形态键（7 个对象）：
+- 眼睑：squint、wide_open
+- 眨眼盖：blink
+- 嘴：smile、open
 
-## 5. 极限姿态测试（render/rig/pose_sheet.png，8 格）
-1. REST A-POSE：正常，IK rest 偏差 ≤1 mm。
-2. ARMS UP (FK)：袖子跟 upperarm，肩补片填缝。
-3. CROUCH (FK)：腿/鞋/袜跟随；裙主要由 pelvis/裙骨控制。
-4. WING FLAP：3 节翼骨链 + 逐根羽片跟随。
-5. IK ARMS + LEGS：脚不强制离地，手前伸，验证 IK。
-6. FINGERS + SKIRT：手指骨弯曲、裙骨小幅摆动。
-7. IK CROUCH (TUNED)：pelvis 下压 0.20 m，脚 IK 固定，lower wing 后扫 55°，skirt 小幅让位。
-8. IK REACH (TUNED)：双手 IK 上移 0.78 m，左腿前伸，验证肩/肘/膝极限。
+注意：GLB 含 morph targets；形态键动画需要在 Blender/引擎中自行 K 帧。FaceDemoV5 主要驱动骨骼，不驱动 morph。
+
+## 5. 测试
+- 面部 6 格：render/final/expression_sheet_v5.png。
+- blink：眨眼盖 blink=1；眼闭合，黑睫毛边保留。
+- squint/wide_open：眼睑片位移；surprise 用 jaw/Pupil/brow 组合。
+- 视线：Pupil_L/R 旋转，虹膜盘跟随。
+- 8 格全身：render/rig/pose_sheet.png（含 IK 深蹲/过顶）。
 
 ## 6. 导出复验
-- export/Reinforce_Eins_TV.glb：165 个 GEO mesh、83 骨、1 skin、4 段 Action；重导入后 83 骨与 Idle/WingFlap/FaceDemo/SecondaryFlow 均在。
-- export/Reinforce_Eins_TV.fbx：带骨架/蒙皮/动作（16 MB）。
-- export/Reinforce_Eins_TV.obj：静态 A-pose，无骨架（查看/打印前处理用）。
-- 注意：GLB/FBX 不含 IK 约束；如果引擎里需要 IK 效果，先在 Blender 用 IK 摆姿并 Bake Action 到 deform 骨，再导出。
+- export/Reinforce_Eins_TV.glb：175 GEO mesh、89 骨、5 Action、7 morph 对象；重导入一致。
+- FBX 19 MB；OBJ 4.3 MB 静态 A-pose。
+- 不含 IK/驱动器；引擎内 IK 需先 Bake。
 
 ## 7. 限制与后续
-- 面部：只有 jaw + brow_L/R；没有眼睑/眨眼、口型、面部 blend shape；眼睛是独立贴片。
-- 二次物理：无碰撞/自碰撞；深蹲/抬臂时裙/外套/腿仍可能穿插，需要手调姿态或后续加碰撞。
-- 羽片：程序化实体叶片；可继续加羽枝/羽小枝或做 UV 贴图。
-- IK：腿 pole angle=-90°、手无 pole 是 rest 干净的折中；更极端动作需要加 IK 限制/校正骨。
-- 手/脚权重是程序化近似；精细抓握/脚趾需要手动 weight paint。
+- 眼睑骨存在并有权重，但 blink 主要靠眨眼盖 morph；连续眼睑皮肤变形尚未做。
+- squint/wide_open 是整体位移，不是精细肌肉；无眼睑碰撞/眼泪/腮红。
+- 嘴只有 smile/open 两个形态键，无牙齿/口腔内部/音素口型。
+- 3D 眼从侧面仍有体积，是风格化取舍。
+- 后续可做：真实眼睑权重/形态键、口型音素、blink 动画 Action、二次物理碰撞。
