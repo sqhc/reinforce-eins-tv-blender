@@ -1,0 +1,4 @@
+Reinforce Eins v5 - GitHub MCP sync receipt
+
+Commit 720b0e8 (git push) contains the v5 model, GLB/FBX/OBJ, face renders, reports and work scripts.
+This receipt was committed through the GitHub MCP server for the requested MCP push.
